@@ -331,7 +331,379 @@
           }
           // Remove off-screen asteroids
           if (asteroid.y > gameCanvas.height) {
+            asteroids.splice(index, 1);<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Sharing Meta Tags -->
+  <title>Varun PC | AI & Software Engineer</title>
+  <meta name="description" content="Portfolio of Varun PC, an AI & Software Engineer specializing in building intelligent systems and scalable backend solutions.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com/">
+  <meta property="og:title" content="Varun PC | AI & Software Engineer">
+  <meta property="og:description" content="Building intelligent systems and scalable backend solutions.">
+  <meta property="og:image" content="https://your-domain.com/social-preview.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://your-domain.com/">
+  <meta property="twitter:title" content="Varun PC | AI & Software Engineer">
+  <meta property="twitter:description" content="Building intelligent systems and scalable backend solutions.">
+  <meta property="twitter:image" content="https://your-domain.com/social-preview.png">
+  
+  <!-- Scripts & Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide-dev"></script>
+
+  <!-- Custom Tailwind Config & CSS -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-sans tracking-tight;
+      }
+      h1, h2, h3 {
+        @apply text-slate-900 dark:text-slate-100 font-bold;
+      }
+      h2 { @apply text-3xl sm:text-4xl; }
+      .section-subtitle { @apply text-cyan-600 dark:text-cyan-400 font-mono text-lg mb-8; }
+      .card { @apply bg-white/50 dark:bg-slate-800/80 backdrop-blur-sm; }
+    }
+    /* Full-screen section styling */
+    .scroll-section {
+      @apply h-screen w-full sticky top-0 flex flex-col items-center justify-center p-6 overflow-hidden;
+      will-change: transform, opacity;
+    }
+    /* Game Canvas Styling */
+    #game-canvas {
+        @apply max-w-2xl w-full mx-auto aspect-video bg-slate-200 dark:bg-slate-800 rounded-lg shadow-lg cursor-pointer;
+    }
+  </style>
+</head>
+<body class="selection:bg-cyan-300 selection:text-cyan-900">
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header id="header" class="bg-transparent fixed top-0 left-0 right-0 z-[100] transition-all duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="magnetic-link text-xl font-bold font-mono text-white">VarunPC/></a>
+      <nav class="hidden md:flex items-center space-x-1 bg-slate-900/30 backdrop-blur-md p-1 rounded-full">
+        <a href="#hero" data-index="0" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Home</a>
+        <a href="#objective" data-index="1" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Objective</a>
+        <a href="#skills" data-index="2" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Skills</a>
+        <a href="#projects" data-index="3" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Projects</a>
+        <a href="#game" data-index="4" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Playground</a>
+        <a href="#contact" data-index="5" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Contact</a>
+        <button id="theme-toggle" class="magnetic-link p-2 rounded-full" aria-label="Toggle theme">
+            <i data-lucide="sun" class="text-white hidden"></i>
+            <i data-lucide="moon" class="text-white hidden"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- This container drives the scroll length -->
+  <div id="scroll-container" class="relative">
+    <!-- HERO -->
+    <section id="hero" class="scroll-section bg-slate-50 dark:bg-slate-900">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-8xl font-black">Varun P C</h1>
+        <p class="text-slate-500 dark:text-slate-400 text-lg md:text-2xl mt-6 font-mono">AI & Robotics Engineer | Innovating the Future</p>
+      </div>
+    </section>
+
+    <!-- OBJECTIVE -->
+    <section id="objective" class="scroll-section bg-slate-50 dark:bg-slate-900">
+        <div class="text-center max-w-3xl">
+            <h2 class="mb-4">Career Objective</h2>
+            <p class="section-subtitle">My Vision & Mission</p>
+            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                I am an Artificial Intelligence and Machine Learning Engineering student passionate about building intelligent systems. With hands-on experience in robotics and backend engineering, I aim to contribute to transformative projects in AI and human-AI collaboration.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="scroll-section bg-slate-50 dark:bg-slate-900">
+        <div class="w-full max-w-4xl">
+          <h2 class="text-center mb-4">Core Competencies</h2>
+          <p class="section-subtitle text-center">Technologies I Work With</p>
+          <div class="grid md:grid-cols-2 gap-8 mt-12">
+            <div class="card p-8 rounded-lg"><h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="code-2" class="text-cyan-600 dark:text-cyan-400"></i>Technical Skills</h3><div class="space-y-3 font-mono text-sm text-slate-600 dark:text-slate-400"><p><strong class="text-slate-800 dark:text-slate-200">Languages:</strong> Golang, Python, C++, Java</p><p><strong class="text-slate-800 dark:text-slate-200">Frameworks:</strong> Flask, Gin, Gorm, SQL, Redis</p><p><strong class="text-slate-800 dark:text-slate-200">Concepts:</strong> REST API, gRPC, Linux, NLP, OpenCV</p></div></div>
+            <div class="card p-8 rounded-lg"><h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="users" class="text-cyan-600 dark:text-cyan-400"></i>Soft Skills</h3><div class="grid grid-cols-2 gap-3 text-slate-600 dark:text-slate-400"><p>Problem-Solving</p><p>Teamwork</p><p>Communication</p><p>Adaptability</p><p>Analytical Thinking</p><p>Attention to Detail</p></div></div>
+          </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="scroll-section bg-slate-50 dark:bg-slate-900">
+        <div class="w-full max-w-5xl">
+            <h2 class="text-center mb-4">Featured Projects</h2>
+            <p class="section-subtitle text-center">Innovations I've Built</p>
+            <div class="grid sm:grid-cols-2 gap-6 mt-12">
+                <article class="card p-6 rounded-lg"><h3 class="font-bold">VQA Chatbot</h3><p class="text-sm text-slate-500 dark:text-slate-400">Deep Learning & NLP for visual question answering.</p></article>
+                <article class="card p-6 rounded-lg"><h3 class="font-bold">High-Performance URL Shortener</h3><p class="text-sm text-slate-500 dark:text-slate-400">Engineered for 7k+ req/sec with caching.</p></article>
+                <article class="card p-6 rounded-lg"><h3 class="font-bold">Gesture-Controlled Virtual Mouse</h3><p class="text-sm text-slate-500 dark:text-slate-400">Navigation using real-time hand tracking.</p></article>
+                <article class="card p-6 rounded-lg"><h3 class="font-bold">Autonomous Robotics Suite</h3><p class="text-sm text-slate-500 dark:text-slate-400">Line Follower, Robo Soccer, Maze Runner bots.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME -->
+    <section id="game" class="scroll-section bg-slate-50 dark:bg-slate-900">
+        <div class="w-full max-w-3xl text-center">
+            <h2 class="mb-4">Playground</h2>
+            <p class="section-subtitle">Asteroid Dodger</p>
+            <div id="game-container" class="relative">
+                <canvas id="game-canvas"></canvas>
+                <div id="game-overlay" class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 backdrop-blur-sm rounded-lg">
+                    <p id="game-message" class="text-3xl font-bold text-white">Click to Start</p>
+                    <p class="text-white mt-2">Use Arrow Keys to Move</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="scroll-section bg-slate-50 dark:bg-slate-900">
+        <div class="text-center">
+            <h2 class="mb-4">Get In Touch</h2>
+            <p class="text-slate-600 dark:text-slate-400 max-w-md mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to innovate together.</p>
+            <a href="mailto:0x0varun0x0@gmail.com" class="magnetic-link inline-block bg-cyan-500 text-slate-900 font-bold px-8 py-3 rounded-md mt-8 hover:bg-cyan-400 transition-colors">Say Hello</a>
+            <div class="flex justify-center space-x-2 mt-12">
+                <a href="#" class="magnetic-link p-4" aria-label="GitHub"><i data-lucide="github" class="w-7 h-7 text-slate-500 dark:text-slate-400"></i></a>
+                <a href="#" class="magnetic-link p-4" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-7 h-7 text-slate-500 dark:text-slate-400"></i></a>
+            </div>
+            <p class="text-slate-500 dark:text-slate-500 text-sm mt-12 font-mono">© 2025 Varun PC</p>
+        </div>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+
+      const sections = document.querySelectorAll('.scroll-section');
+      const scrollContainer = document.getElementById('scroll-container');
+      let currentSectionIndex = 0;
+
+      function setup() {
+        scrollContainer.style.height = `${sections.length * 100}vh`;
+        sections.forEach((section, index) => {
+            section.style.zIndex = sections.length - index;
+        });
+      }
+
+      // Easing function for smoother animations
+      function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      }
+
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        const vh = window.innerHeight;
+        const newSectionIndex = Math.min(sections.length - 1, Math.floor(scrollY / vh));
+        const progress = (scrollY % vh) / vh;
+        const easedProgress = easeInOutCubic(progress);
+
+        if (newSectionIndex !== currentSectionIndex) {
+            currentSectionIndex = newSectionIndex;
+            updateNav();
+        }
+
+        sections.forEach((section, index) => {
+            if (index < currentSectionIndex) {
+                section.style.opacity = '0';
+                section.style.transform = 'scale(0.8)';
+            } else if (index === currentSectionIndex) {
+                const scale = 1 - easedProgress * 0.2;
+                const opacity = 1 - easedProgress;
+                section.style.transform = `scale(${scale})`;
+                section.style.opacity = opacity;
+            } else {
+                section.style.opacity = '1';
+                section.style.transform = 'scale(1)';
+            }
+        });
+      }, { passive: true });
+      
+      const navLinks = document.querySelectorAll('.nav-link');
+      function updateNav() {
+          navLinks.forEach(link => {
+              link.classList.remove('bg-cyan-500/20');
+              if (parseInt(link.dataset.index) === currentSectionIndex) {
+                  link.classList.add('bg-cyan-500/20');
+              }
+          });
+      }
+      updateNav();
+
+      const themeToggle = document.getElementById('theme-toggle');
+      const sunIcon = themeToggle.querySelector('[data-lucide="sun"]');
+      const moonIcon = themeToggle.querySelector('[data-lucide="moon"]');
+      const applyTheme = (theme) => {
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden');
+        } else {
+          document.documentElement.classList.remove('dark');
+          sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden');
+        }
+      };
+      applyTheme(document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      themeToggle.addEventListener('click', () => {
+        const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
+        localStorage.theme = newTheme;
+        applyTheme(newTheme);
+      });
+
+      const magneticElements = document.querySelectorAll('.magnetic-link');
+      magneticElements.forEach(el => {
+        el.addEventListener('mousemove', function(e) {
+          const pos = this.getBoundingClientRect();
+          const x = e.clientX - pos.left - pos.width / 2;
+          const y = e.clientY - pos.top - pos.height / 2;
+          this.style.transition = 'transform 0.1s ease-out';
+          this.style.transform = `translate(${x * 0.3}px, ${y * 0.4}px)`;
+        });
+        el.addEventListener('mouseleave', function() {
+          this.style.transition = 'transform 0.3s ease-in-out';
+          this.style.transform = 'translate(0, 0)';
+        });
+      });
+
+      // --- ASTEROID DODGER GAME LOGIC ---
+      const gameCanvas = document.getElementById('game-canvas');
+      const gameOverlay = document.getElementById('game-overlay');
+      const gameMessage = document.getElementById('game-message');
+      const ctx = gameCanvas.getContext('2d');
+      let player, asteroids, score, gameOver, animationFrame;
+
+      function resizeCanvas() {
+        const container = document.getElementById('game-container');
+        gameCanvas.width = container.clientWidth;
+        gameCanvas.height = container.clientHeight;
+      }
+      
+      function initGame() {
+        resizeCanvas();
+        player = {
+          x: gameCanvas.width / 2,
+          y: gameCanvas.height - 30,
+          width: 20,
+          height: 20,
+          speed: 5,
+          dx: 0
+        };
+        asteroids = [];
+        score = 0;
+        gameOver = false;
+        gameMessage.textContent = 'Click to Start';
+        gameOverlay.style.display = 'flex';
+        if (animationFrame) cancelAnimationFrame(animationFrame);
+      }
+
+      function createAsteroid() {
+        const size = Math.random() * 20 + 10;
+        asteroids.push({
+          x: Math.random() * gameCanvas.width,
+          y: -size,
+          size: size,
+          speed: Math.random() * 2 + 1
+        });
+      }
+
+      function update() {
+        if (gameOver) return;
+        
+        ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+        // Player
+        player.x += player.dx;
+        if (player.x < 0) player.x = 0;
+        if (player.x + player.width > gameCanvas.width) player.x = gameCanvas.width - player.width;
+        ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#22d3ee' : '#0891b2';
+        ctx.fillRect(player.x, player.y, player.width, player.height);
+
+        // Asteroids
+        if (Math.random() < 0.05) createAsteroid();
+        ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#64748b' : '#94a3b8';
+        asteroids.forEach((asteroid, index) => {
+          asteroid.y += asteroid.speed;
+          ctx.fillRect(asteroid.x, asteroid.y, asteroid.size, asteroid.size);
+          // Collision
+          if (
+            player.x < asteroid.x + asteroid.size &&
+            player.x + player.width > asteroid.x &&
+            player.y < asteroid.y + asteroid.size &&
+            player.y + player.height > asteroid.y
+          ) {
+            gameOver = true;
+            gameMessage.textContent = `Game Over! Score: ${score}`;
+            gameOverlay.style.display = 'flex';
+          }
+          // Remove off-screen asteroids
+          if (asteroid.y > gameCanvas.height) {
             asteroids.splice(index, 1);
+            score++;
+          }
+        });
+        
+        // Score
+        ctx.fillStyle = document.documentElement.classList.contains('dark') ? 'white' : 'black';
+        ctx.font = '16px JetBrains Mono';
+        ctx.fillText(`Score: ${score}`, 10, 20);
+
+        animationFrame = requestAnimationFrame(update);
+      }
+
+      function movePlayer(e) {
+        if (e.key === 'ArrowRight' || e.key === 'd') player.dx = player.speed;
+        else if (e.key === 'ArrowLeft' || e.key === 'a') player.dx = -player.speed;
+      }
+      function stopPlayer(e) {
+        if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'ArrowLeft' || e.key === 'a') player.dx = 0;
+      }
+
+      gameOverlay.addEventListener('click', () => {
+        initGame();
+        gameOverlay.style.display = 'none';
+        update();
+      });
+      
+      window.addEventListener('keydown', movePlayer);
+      window.addEventListener('keyup', stopPlayer);
+      window.addEventListener('resize', initGame);
+      
+      // --- INITIAL SETUP CALLS ---
+      setup();
+      initGame();
+      window.addEventListener('resize', setup);
+    });
+  </script>
+</body>
+</html>
+
             score++;
           }
         });
