@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth"> <head>
+<html lang="en" class="scroll-smooth">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio of Varun P C, an AI & Machine Learning Engineering student specializing in AI, robotics, and software systems." />
@@ -15,7 +16,6 @@
     body {
       font-family: 'Inter', sans-serif;
     }
-    /* Reveal animations */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -25,7 +25,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-    /* Project card hover */
     .project-card {
       transition: transform 0.3s ease, border-color 0.3s ease;
     }
@@ -64,10 +63,11 @@
     </div>
   </nav>
 
-  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16"> <img src="your-photo.jpg" alt="Varun P C" class="w-32 h-32 rounded-full border-4 border-blue-500 shadow-lg mb-6">
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16">
+    <img src="https://images.unsplash.com/photo-1677756119517-756a188d2d94?q=80&w=1374&auto=format&fit=crop" alt="Abstract AI-themed digital art" class="w-32 h-32 rounded-full border-4 border-blue-500 shadow-lg mb-6 object-cover">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-500">Varun P C</span></h1>
-    <p class="max-w-2xl text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
-      AI & Machine Learning Engineering student passionate about building transformative technologies in AI, robotics, and software systems.
+    <p class="max-w-3xl text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
+      [span_0](start_span)An Artificial Intelligence and Machine Learning Engineering student passionate about merging my skills with innovative advancements in AI and contributing to transformative projects.[span_0](end_span)
     </p>
     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
       <a href="#projects" class="bg-blue-500 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition-colors">View My Work</a>
@@ -80,19 +80,24 @@
       <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="project-card flex flex-col border border-gray-200 dark:border-gray-700 p-6 rounded-lg shadow bg-gray-50 dark:bg-gray-700">
-          <h3 class="text-xl font-semibold mb-2 text-blue-500">VQA Chatbot for Dermatology</h3>
-          <p class="text-gray-600 dark:text-gray-300 flex-grow">Engineered a chatbot capable of answering dermatology queries using deep learning and NLP. Supported disease & allergy detection for decision support.</p>
-          <div class="mt-4 flex space-x-4">
-            <a href="#" target="_blank" class="text-gray-500 hover:text-blue-500" aria-label="GitHub Repository">GitHub Link</a>
-            <a href="#" target="_blank" class="text-gray-500 hover:text-blue-500" aria-label="Live Demo">Live Demo</a>
-          </div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">VQA Chatbot for Dermatology Assistance</h3>
+          [span_1](start_span)<p class="text-sm text-gray-500 mb-2">Python, TensorFlow, NLP[span_1](end_span)</p>
+          [span_2](start_span)<p class="text-gray-600 dark:text-gray-300 flex-grow">Engineered a chatbot for clinically relevant dermatology queries using deep learning and NLP, supporting disease and allergy detection for decision support.[span_2](end_span)</p>
         </div>
         <div class="project-card flex flex-col border border-gray-200 dark:border-gray-700 p-6 rounded-lg shadow bg-gray-50 dark:bg-gray-700">
-          <h3 class="text-xl font-semibold mb-2 text-blue-500">High-Performance URL Shortener</h3>
-          <p class="text-gray-600 dark:text-gray-300 flex-grow">Built a URL shortener in Go with Redis caching, achieving over 7,000 req/sec and reducing response time by 90% through efficient key-value storage.</p>
-          <div class="mt-4 flex space-x-4">
-            <a href="#" target="_blank" class="text-gray-500 hover:text-blue-500" aria-label="GitHub Repository">GitHub Link</a>
-          </div>
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">URL Shortener Project</h3>
+          [span_3](start_span)<p class="text-sm text-gray-500 mb-2">Golang, PostgreSQL, Redis[span_3](end_span)</p>
+          [span_4](start_span)<p class="text-gray-600 dark:text-gray-300 flex-grow">Developed a high-performance URL shortener achieving 7,000+ req/sec, reducing response times by 90% and saving $8 per million requests via caching.[span_4](end_span)</p>
+        </div>
+        <div class="project-card flex flex-col border border-gray-200 dark:border-gray-700 p-6 rounded-lg shadow bg-gray-50 dark:bg-gray-700">
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Virtual Mouse</h3>
+          [span_5](start_span)<p class="text-sm text-gray-500 mb-2">Python, MediaPipe, OpenCV[span_5](end_span)</p>
+          [span_6](start_span)<p class="text-gray-600 dark:text-gray-300 flex-grow">Built a gesture-controlled virtual mouse for hands-free navigation, achieving near real-time responsiveness and high accuracy with computer vision pipelines.[span_6](end_span)</p>
+        </div>
+        <div class="project-card flex flex-col border border-gray-200 dark:border-gray-700 p-6 rounded-lg shadow bg-gray-50 dark:bg-gray-700">
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">Autonomous Robotics Projects</h3>
+          [span_7](start_span)<p class="text-sm text-gray-500 mb-2">Microcontrollers, IR Sensors, Embedded C, Arduino[span_7](end_span)</p>
+          [span_8](start_span)<p class="text-gray-600 dark:text-gray-300 flex-grow">Designed and implemented autonomous robots with sensor arrays and path-planning algorithms, successfully deployed in Innovatex 2.0 events.[span_8](end_span)</p>
         </div>
       </div>
     </div>
@@ -102,17 +107,24 @@
     <div class="max-w-6xl mx-auto px-6 reveal">
       <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
       <div class="text-center">
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Golang</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Python</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">C++</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Flask</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Gin</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Redis</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">SQL</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">REST API</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">gRPC</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Linux</span>
-        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Docker</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Golang</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Python</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">C++</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Java</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Kotlin</span>
+        <span class="inline-block bg-gray-100 text-gray-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-gray-700 dark:text-gray-300">Deep Learning</span>
+        <span class="inline-block bg-gray-100 text-gray-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-gray-700 dark:text-gray-300">Machine Learning</span>
+        <span class="inline-block bg-gray-100 text-gray-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-gray-700 dark:text-gray-300">NLP</span>
+        <span class="inline-block bg-gray-100 text-gray-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-gray-700 dark:text-gray-300">OpenCV</span>
+        <span class="inline-block bg-teal-100 text-teal-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-teal-900 dark:text-teal-300">Flask</span>
+        <span class="inline-block bg-teal-100 text-teal-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-teal-900 dark:text-teal-300">Gin</span>
+        <span class="inline-block bg-teal-100 text-teal-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-teal-900 dark:text-teal-300">Gorm</span>
+        <span class="inline-block bg-teal-100 text-teal-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-teal-900 dark:text-teal-300">SQL</span>
+        <span class="inline-block bg-teal-100 text-teal-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-teal-900 dark:text-teal-300">REST API</span>
+        <span class="inline-block bg-teal-100 text-teal-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-teal-900 dark:text-teal-300">Redis</span>
+        <span class="inline-block bg-teal-100 text-teal-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-teal-900 dark:text-teal-300">gRPC</span>
+        <span class="inline-block bg-teal-100 text-teal-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-teal-900 dark:text-teal-300">System Design</span>
+        <span class="inline-block bg-teal-100 text-teal-700 font-medium py-1.5 px-3 rounded-full m-1 dark:bg-teal-900 dark:text-teal-300">Linux</span>
       </div>
     </div>
   </section>
@@ -121,39 +133,41 @@
     <div class="max-w-4xl mx-auto px-6 reveal">
       <h2 class="text-3xl font-bold text-center mb-12">Experience</h2>
       <div class="border-l-2 border-blue-500 pl-6">
-        <h3 class="text-xl font-semibold">Backend Developer Intern</h3>
-        <p class="text-md text-gray-500 dark:text-gray-400 mb-2">Comedkares | Aug 2023 - Sep 2023</p>
-        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-          <li>Developed and maintained RESTful APIs for a healthcare application using Golang and the Gin framework.</li>
-          <li>Implemented JWT-based authentication to secure endpoints and manage user sessions.</li>
-          <li>Collaborated with the frontend team to integrate APIs and troubleshoot issues, improving application stability.</li>
-        </ul>
+        <h3 class="text-xl font-semibold">Programme On Robotics</h3>
+        <p class="text-md text-gray-500 dark:text-gray-400 mb-2">Comedkares | [span_9](start_span)Aug 2023 - Sep 2023[span_9](end_span)</p>
       </div>
     </div>
   </section>
 
   <section id="education" class="py-20">
-    <div class="max-w-6xl mx-auto px-6 reveal grid md:grid-cols-2 gap-12">
+    <div class="max-w-6xl mx-auto px-6 reveal grid md:grid-cols-2 gap-16">
       <div>
         <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
-        <div class="space-y-4 text-center md:text-left">
-          <div>
-            <h3 class="font-semibold">B.Tech, AI & Machine Learning</h3>
-            <p>Presidency University, Bengaluru (GPA: 7.55)</p>
+        <div class="space-y-6">
+          <div class="text-center md:text-left">
+            <h3 class="font-semibold text-lg">B.Tech, Artificial Intelligence and Machine Learning</h3>
+            <p>Presidency University, Bengaluru | [span_10](start_span)GPA: 7.55[span_10](end_span)</p>
           </div>
-          <div>
-            <h3 class="font-semibold">PUC (Science)</h3>
-            <p>Sai Angels PU College, Chikkamagaluru (78%)</p>
+          <div class="text-center md:text-left">
+            <h3 class="font-semibold text-lg">12th PUC</h3>
+            <p>Sai Angels PU College, Chikkamagaluru | [span_11](start_span)78%[span_11](end_span)</p>
+          </div>
+          <div class="text-center md:text-left">
+            <h3 class="font-semibold text-lg">10th ICSE</h3>
+            <p>St. Mary's International School, Chikkamagaluru | [span_12](start_span)86%[span_12](end_span)</p>
           </div>
         </div>
       </div>
       <div id="awards">
         <h2 class="text-3xl font-bold text-center mb-8">Awards & Activities</h2>
-        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-center md:text-left">
-          <li>Finalist, CodeRed Hackathon @ NIT Karnataka (2024)</li>
-          <li>2nd Place, Smart India Hackathon Internal @ Presidency University (2024)</li>
-          <li>Participant, FantomCode RVITM Hackathon (2023)</li>
-          </ul>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
+          [span_13](start_span)<li>Participated in CodeRed Hackathon at NIT Karnataka (2024)[span_13](end_span)</li>
+          [span_14](start_span)<li>Won 2nd place in SIH held in Presidency University (2024)[span_14](end_span)</li>
+          [span_15](start_span)<li>Won 2nd place in Anveshana held in Presidency University (2024)[span_15](end_span)</li>
+          [span_16](start_span)<li>Participated in Innovatex 2.0 (Line Follower, Robo Soccer, Maze Runner) (2023)[span_16](end_span)</li>
+          [span_17](start_span)<li>Participated in FantomCode RVITM Hackathon (2023)[span_17](end_span)</li>
+          [span_18](start_span)<li>Participated in HackPrix 2.0 Hackathon in Lords College (2025)[span_18](end_span)</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -161,9 +175,9 @@
   <footer class="bg-gray-900 text-gray-400 py-6 text-center">
     <p>© 2025 Varun P C | Built with Tailwind CSS</p>
     <div class="mt-4 space-x-6">
-      <a href="https://github.com/0-varun-0" target="_blank" class="hover:text-white">GitHub</a>
-      <a href="https://linkedin.com/in/your-profile" target="_blank" class="hover:text-white">LinkedIn</a>
-      <a href="/path-to-your-resume.pdf" target="_blank" class="hover:text-white">Resume</a>
+      <a href="https://github.com/0x0varun0x0" target="_blank" class="hover:text-white">GitHub</a>
+      <a href="#" target="_blank" class="hover:text-white">LinkedIn</a>
+      <a href="#" target="_blank" class="hover:text-white">Portfolio</a>
     </div>
   </footer>
 
@@ -175,7 +189,7 @@
       mobileMenu.classList.toggle('hidden');
     });
 
-    // --- Change: More performant Scroll Reveal using IntersectionObserver ---
+    // --- More performant Scroll Reveal using IntersectionObserver ---
     const reveals = document.querySelectorAll(".reveal");
 
     const observer = new IntersectionObserver((entries) => {
@@ -185,7 +199,7 @@
         }
       });
     }, {
-      threshold: 0.1 // Trigger when 10% of the element is visible
+      threshold: 0.1
     });
 
     reveals.forEach(r => observer.observe(r));
