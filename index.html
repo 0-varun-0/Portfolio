@@ -4,15 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Varun PC | AI & Software Engineer</title>
-  
+  <meta name="description" content="Varun PC - AI & Robotics Engineer | Specializing in AI, Robotics, and High-Performance Backend Systems.">
   <script src="https://cdn.tailwindcss.com"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  
   <script src="https://unpkg.com/lucide-dev"></script>
-
   <style type="text/tailwindcss">
     @layer base {
       body {
@@ -28,23 +25,21 @@
         @apply text-cyan-400 font-mono text-lg mb-8;
       }
     }
-    /* Custom Glitch Effect */
+    /* Glitch Effect */
     .glitch {
       position: relative;
       font-family: 'JetBrains Mono', monospace;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      animation: glitch-skew 1s infinite linear alternate-reverse;
     }
     .glitch::before, .glitch::after {
       content: attr(data-text);
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: #1e293b;
       overflow: hidden;
-      clip: rect(0, 900px, 0, 0);
+      clip: rect(0, 0, 0, 0);
     }
     .glitch::before {
       left: 2px;
@@ -56,9 +51,35 @@
       text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
       animation: glitch-anim-2 3s infinite linear alternate-reverse;
     }
-    @keyframes glitch-anim-1 { 0% { clip: rect(42px, 9999px, 44px, 0); } 20% { clip: rect(12px, 9999px, 60px, 0); } 40% { clip: rect(5px, 9999px, 80px, 0); } 60% { clip: rect(70px, 9999px, 10px, 0); } 80% { clip: rect(90px, 9999px, 50px, 0); } 100% { clip: rect(20px, 9999px, 75px, 0); } }
-    @keyframes glitch-anim-2 { 0% { clip: rect(2px, 9999px, 98px, 0); } 20% { clip: rect(95px, 9999px, 25px, 0); } 40% { clip: rect(40px, 9999px, 15px, 0); } 60% { clip: rect(80px, 9999px, 55px, 0); } 80% { clip: rect(10px, 9999px, 90px, 0); } 100% { clip: rect(65px, 9999px, 30px, 0); } }
-    @keyframes glitch-skew { 0% { transform: skew(0deg); } 10% { transform: skew(1deg); } 20% { transform: skew(-1deg); } 30% { transform: skew(2deg); } 40% { transform: skew(-2deg); } 50% { transform: skew(0deg); } 100% { transform: skew(0deg); } }
+    @keyframes glitch-anim-1 {
+      0% { clip: rect(42px, 9999px, 44px, 0); }
+      50% { clip: rect(12px, 9999px, 75px, 0); }
+      100% { clip: rect(20px, 9999px, 90px, 0); }
+    }
+    @keyframes glitch-anim-2 {
+      0% { clip: rect(2px, 9999px, 98px, 0); }
+      50% { clip: rect(40px, 9999px, 15px, 0); }
+      100% { clip: rect(65px, 9999px, 30px, 0); }
+    }
+    /* Typewriter Subtitle */
+    #subtitle::after {
+      content: "|";
+      animation: blink 1s infinite;
+      color: #22d3ee;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+    /* Tech tags */
+    .tech-tag { @apply bg-cyan-400/10 text-cyan-300 text-xs font-mono px-2 py-1 rounded; }
+    /* Timeline Awards */
+    .timeline { @apply border-l border-slate-700 pl-6 space-y-6; }
+    .timeline-item { @apply relative; }
+    .timeline-item::before {
+      content: "";
+      @apply absolute -left-[0.7rem] top-1 w-3 h-3 rounded-full bg-cyan-400;
+    }
   </style>
   <script>
     tailwind.config = {
@@ -74,58 +95,66 @@
   </script>
 </head>
 <body class="bg-slate-900 selection:bg-cyan-300 selection:text-cyan-900">
-
+  <!-- ===== HEADER / NAVBAR ===== -->
   <header id="header" class="bg-slate-900/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 transition-shadow duration-300">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="text-xl font-bold font-mono text-cyan-400">VarunPC/></a>
       
       <nav class="hidden md:flex space-x-8">
-        <a href="#objective" class="text-slate-300 hover:text-cyan-400 transition-colors">Objective</a>
-        <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition-colors">Skills</a>
-        <a href="#projects" class="text-slate-300 hover:text-cyan-400 transition-colors">Projects</a>
-        <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition-colors">Contact</a>
+        <a href="#objective" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Objective</a>
+        <a href="#skills" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Skills</a>
+        <a href="#projects" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Projects</a>
+        <a href="#awards" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Awards</a>
+        <a href="#contact" class="nav-link text-slate-300 hover:text-cyan-400 transition-colors">Contact</a>
       </nav>
 
-      <button id="mobile-nav-btn" class="md:hidden z-50" aria-label="Toggle Navigation">
+      <!-- Mobile nav toggle -->
+      <button id="mobile-nav-btn" class="md:hidden z-50" aria-label="Toggle Navigation" aria-expanded="false">
         <i data-lucide="menu" class="text-slate-300"></i>
         <i data-lucide="x" class="hidden text-slate-300"></i>
       </button>
 
+      <!-- Mobile menu -->
       <div id="mobile-nav-menu" class="fixed top-0 left-0 w-full h-full bg-slate-900/95 backdrop-blur-xl transform -translate-y-full transition-transform duration-500 ease-in-out md:hidden">
         <nav class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
-          <a href="#objective" class="mobile-nav-link text-slate-300 hover:text-cyan-400 transition-colors">Objective</a>
-          <a href="#skills" class="mobile-nav-link text-slate-300 hover:text-cyan-400 transition-colors">Skills</a>
-          <a href="#projects" class="mobile-nav-link text-slate-300 hover:text-cyan-400 transition-colors">Projects</a>
-          <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-cyan-400 transition-colors">Contact</a>
+          <a href="#objective" class="mobile-nav-link text-slate-300 hover:text-cyan-400">Objective</a>
+          <a href="#skills" class="mobile-nav-link text-slate-300 hover:text-cyan-400">Skills</a>
+          <a href="#projects" class="mobile-nav-link text-slate-300 hover:text-cyan-400">Projects</a>
+          <a href="#awards" class="mobile-nav-link text-slate-300 hover:text-cyan-400">Awards</a>
+          <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-cyan-400">Contact</a>
         </nav>
       </div>
     </div>
   </header>
 
+  <!-- ===== HERO ===== -->
   <main class="container mx-auto px-6 pt-24">
     <section id="hero" class="min-h-[calc(100vh-6rem)] flex flex-col items-center justify-center text-center">
       <h1 class="glitch text-5xl md:text-8xl text-slate-100" data-text="Varun P C">Varun P C</h1>
-      <p id="subtitle" class="text-slate-400 text-lg md:text-2xl mt-6 font-mono"></p>
-      <a href="#objective" class="mt-12 animate-bounce">
-        <i data-lucide="arrow-down-circle" class="w-10 h-10 text-cyan-400"></i>
-      </a>
+      <p id="subtitle" class="text-slate-400 text-lg md:text-2xl mt-6 font-mono">AI & Robotics Engineer | Innovating the Future</p>
+      <div class="mt-12 flex gap-6">
+        <a href="#projects" class="bg-cyan-500 text-slate-900 px-6 py-3 rounded-md font-bold hover:bg-cyan-400 transition">View Projects</a>
+        <a href="#objective" class="mt-1"><i data-lucide="arrow-down-circle" class="w-10 h-10 text-cyan-400"></i></a>
+      </div>
     </section>
 
+    <!-- ===== OBJECTIVE ===== -->
     <section id="objective" class="section py-24">
       <h2 class="text-center">Career Objective</h2>
       <p class="section-subtitle text-center">My Vision & Mission</p>
       <p class="max-w-3xl mx-auto text-lg text-slate-400 text-center leading-relaxed">
-        I am an Artificial Intelligence and Machine Learning Engineering student passionate about 
-        building intelligent systems and innovative solutions. I aim to contribute to transformative 
-        projects in AI, robotics, and distributed computing while collaborating with teams to shape 
-        the future of technology.
+        I am an Artificial Intelligence and Machine Learning Engineering student passionate about building intelligent systems and innovative solutions. 
+        With hands-on experience in robotics and backend engineering, I aim to contribute to transformative projects in AI, distributed computing, and human-AI collaboration.
+        <span class="text-cyan-400">Currently seeking opportunities in Applied AI, Robotics, or Scalable Backend Systems.</span>
       </p>
     </section>
 
+    <!-- ===== SKILLS ===== -->
     <section id="skills" class="section py-24">
       <h2 class="text-center">Core Competencies</h2>
       <p class="section-subtitle text-center">Technologies I Work With</p>
       <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto mt-12">
+        <!-- Tech Skills -->
         <div class="bg-slate-800/50 p-8 rounded-lg">
           <h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="code-2" class="text-cyan-400"></i>Technical Skills</h3>
           <div class="space-y-3 font-mono text-slate-400">
@@ -134,112 +163,122 @@
               <p><strong class="text-slate-200">Concepts:</strong> REST API, gRPC, Linux, NLP, OpenCV, Deep Learning</p>
           </div>
         </div>
+        <!-- Soft Skills -->
         <div class="bg-slate-800/50 p-8 rounded-lg">
           <h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="users" class="text-cyan-400"></i>Soft Skills</h3>
           <div class="grid grid-cols-2 gap-3 text-slate-400">
-            <p>Problem-Solving</p>
-            <p>Teamwork</p>
-            <p>Effective Communication</p>
-            <p>Adaptability</p>
-            <p>Analytical Thinking</p>
-            <p>Attention to Detail</p>
+            <p>Problem-Solving</p><p>Teamwork</p>
+            <p>Communication</p><p>Adaptability</p>
+            <p>Analytical Thinking</p><p>Attention to Detail</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ===== PROJECTS ===== -->
     <section id="projects" class="section py-24">
-        <h2 class="text-center">Featured Projects</h2>
-        <p class="section-subtitle text-center">Innovations I've Built</p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
-          <article class="group relative flex flex-col bg-slate-800/50 rounded-lg p-8 transition-all duration-300 hover:!opacity-100 group-hover:opacity-50 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-2">
-            <h3 class="text-xl font-bold mb-2">VQA Chatbot</h3>
-            <p class="text-slate-400 mb-4 text-sm">Dermatology chatbot leveraging Deep Learning and NLP for visual question answering.</p>
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">TensorFlow</span>
-              <span class="tech-tag">NLP</span>
-            </div>
-          </article>
-          <article class="group relative flex flex-col bg-slate-800/50 rounded-lg p-8 transition-all duration-300 hover:!opacity-100 group-hover:opacity-50 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-2">
-            <h3 class="text-xl font-bold mb-2">High-Performance URL Shortener</h3>
-            <p class="text-slate-400 mb-4 text-sm">Engineered for 7k+ req/sec with a 90% latency reduction using cost-optimized caching strategies.</p>
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="tech-tag">Go</span>
-              <span class="tech-tag">Redis</span>
-              <span class="tech-tag">PostgreSQL</span>
-            </div>
-          </article>
-          <article class="group relative flex flex-col bg-slate-800/50 rounded-lg p-8 transition-all duration-300 hover:!opacity-100 group-hover:opacity-50 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-2">
-            <h3 class="text-xl font-bold mb-2">Gesture-Controlled Virtual Mouse</h3>
-            <p class="text-slate-400 mb-4 text-sm">Intuitive, gesture-controlled navigation system using real-time hand tracking.</p>
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">OpenCV</span>
-            </div>
-          </article>
-          <article class="group relative flex flex-col bg-slate-800/50 rounded-lg p-8 transition-all duration-300 hover:!opacity-100 group-hover:opacity-50 hover:shadow-lg hover:shadow-cyan-400/10 hover:-translate-y-2">
-            <h3 class="text-xl font-bold mb-2">Autonomous Robotics Suite</h3>
-            <p class="text-slate-400 mb-4 text-sm">Developed a series of bots (Line Follower, Robo Soccer, Maze Runner) for competitive events.</p>
-            <div class="flex flex-wrap gap-2 mt-auto">
-              <span class="tech-tag">Arduino</span>
-              <span class="tech-tag">IR Sensors</span>
-              <span class="tech-tag">C++</span>
-            </div>
-          </article>
-        </div>
-        <style>.tech-tag { @apply bg-cyan-400/10 text-cyan-300 text-xs font-mono px-2 py-1 rounded; }</style>
-      </section>
+      <h2 class="text-center">Featured Projects</h2>
+      <p class="section-subtitle text-center">Innovations I've Built</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-12">
+        <!-- Project 1 -->
+        <article class="group bg-slate-800/50 rounded-lg p-8 hover:shadow-lg hover:shadow-cyan-400/10 transition">
+          <h3 class="text-xl font-bold mb-2">VQA Chatbot</h3>
+          <p class="text-slate-400 mb-4 text-sm">Dermatology chatbot leveraging Deep Learning and NLP for visual question answering.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag">Python</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">NLP</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded hover:bg-cyan-500 hover:text-slate-900">GitHub</a>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="group bg-slate-800/50 rounded-lg p-8 hover:shadow-lg hover:shadow-cyan-400/10 transition">
+          <h3 class="text-xl font-bold mb-2">High-Performance URL Shortener</h3>
+          <p class="text-slate-400 mb-4 text-sm">Engineered for 7k+ req/sec with 90% latency reduction using cost-optimized caching strategies.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag">Go</span><span class="tech-tag">Redis</span><span class="tech-tag">PostgreSQL</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded hover:bg-cyan-500 hover:text-slate-900">GitHub</a>
+            <a href="#" class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded hover:bg-cyan-500 hover:text-slate-900">Live Demo</a>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="group bg-slate-800/50 rounded-lg p-8 hover:shadow-lg hover:shadow-cyan-400/10 transition">
+          <h3 class="text-xl font-bold mb-2">Gesture-Controlled Virtual Mouse</h3>
+          <p class="text-slate-400 mb-4 text-sm">Intuitive, gesture-controlled navigation system using real-time hand tracking.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag">Python</span><span class="tech-tag">OpenCV</span>
+          </div>
+        </article>
+        <!-- Project 4 -->
+        <article class="group bg-slate-800/50 rounded-lg p-8 hover:shadow-lg hover:shadow-cyan-400/10 transition">
+          <h3 class="text-xl font-bold mb-2">Autonomous Robotics Suite</h3>
+          <p class="text-slate-400 mb-4 text-sm">Developed a series of bots (Line Follower, Robo Soccer, Maze Runner) for competitive events.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tech-tag">Arduino</span><span class="tech-tag">IR Sensors</span><span class="tech-tag">C++</span>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <section id="awards" class="section py-24">
-        <h2 class="text-center">Activities & Awards</h2>
-        <p class="section-subtitle text-center">Achievements and Recognition</p>
-        <div class="max-w-2xl mx-auto mt-12 bg-slate-800/50 p-8 rounded-lg">
-          <ul class="space-y-4">
-            <li class="flex items-start gap-4"><i data-lucide="award" class="w-6 h-6 text-cyan-400 mt-1"></i><div><strong>2nd Place</strong> – Smart India Hackathon 2024</div></li>
-            <li class="flex items-start gap-4"><i data-lucide="award" class="w-6 h-6 text-cyan-400 mt-1"></i><div><strong>2nd Place</strong> – Anveshana 2024</div></li>
-            <li class="flex items-start gap-4"><i data-lucide="code" class="w-6 h-6 text-slate-400 mt-1"></i><div><strong>Participant</strong> – HackPrix 2.0 – 2025</div></li>
-            <li class="flex items-start gap-4"><i data-lucide="code" class="w-6 h-6 text-slate-400 mt-1"></i><div><strong>Participant</strong> – CodeRed Hackathon, NITK – 2024</div></li>
-          </ul>
+    <!-- ===== AWARDS ===== -->
+    <section id="awards" class="section py-24">
+      <h2 class="text-center">Activities & Awards</h2>
+      <p class="section-subtitle text-center">Achievements & Recognition</p>
+      <div class="max-w-2xl mx-auto mt-12 bg-slate-800/50 p-8 rounded-lg">
+        <div class="timeline">
+          <div class="timeline-item"><strong>2nd Place</strong> – Smart India Hackathon 2024</div>
+          <div class="timeline-item"><strong>2nd Place</strong> – Anveshana 2024</div>
+          <div class="timeline-item"><strong>Participant</strong> – HackPrix 2.0 – 2025</div>
+          <div class="timeline-item"><strong>Participant</strong> – CodeRed Hackathon, NITK – 2024</div>
         </div>
-      </section>
+      </div>
+    </section>
   </main>
-  
+
+  <!-- ===== FOOTER / CONTACT ===== -->
   <footer id="contact" class="bg-slate-950/50 mt-24">
     <div class="container mx-auto px-6 py-12 text-center">
       <h2 class="text-center">Get In Touch</h2>
-      <p class="text-slate-400 max-w-md mx-auto mt-4">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an innovative vision.</p>
+      <p class="text-slate-400 max-w-md mx-auto mt-4">I'm always open to discussing new projects, creative ideas, or opportunities to innovate together.</p>
+
       <a href="mailto:0x0varun0x0@gmail.com" class="inline-block bg-cyan-500 text-slate-900 font-bold px-8 py-3 rounded-md mt-8 hover:bg-cyan-400 transition-colors">
         Say Hello
       </a>
+
+      <a href="/VarunPC_Resume.pdf" download class="ml-4 inline-block bg-slate-800 text-cyan-300 font-bold px-8 py-3 rounded-md mt-8 hover:bg-cyan-500 hover:text-slate-900 transition-colors">
+        📄 Download Resume
+      </a>
+
       <div class="flex justify-center space-x-6 mt-12">
-        <a href="#" aria-label="GitHub"><i data-lucide="github" class="w-7 h-7 text-slate-400 hover:text-cyan-400 transition-colors"></i></a>
-        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-7 h-7 text-slate-400 hover:text-cyan-400 transition-colors"></i></a>
-        <a href="#" aria-label="Portfolio"><i data-lucide="briefcase" class="w-7 h-7 text-slate-400 hover:text-cyan-400 transition-colors"></i></a>
+        <a href="https://github.com/varunpc" aria-label="GitHub"><i data-lucide="github" class="w-7 h-7 text-slate-400 hover:text-cyan-400"></i></a>
+        <a href="https://linkedin.com/in/varunpc" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-7 h-7 text-slate-400 hover:text-cyan-400"></i></a>
+        <a href="#" aria-label="Portfolio"><i data-lucide="briefcase" class="w-7 h-7 text-slate-400 hover:text-cyan-400"></i></a>
       </div>
+
       <p class="text-slate-500 text-sm mt-12 font-mono">
         © 2025 Varun PC | Designed & Built with ❤️
       </p>
     </div>
   </footer>
 
+  <!-- ===== SCRIPTS ===== -->
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
-
     document.addEventListener('DOMContentLoaded', () => {
-      // --- Mobile Navigation ---
       const navBtn = document.getElementById('mobile-nav-btn');
       const navMenu = document.getElementById('mobile-nav-menu');
       const [menuIcon, closeIcon] = navBtn.querySelectorAll('i');
       
+      // Mobile Nav Toggle
       navBtn.addEventListener('click', () => {
         navMenu.classList.toggle('-translate-y-full');
         menuIcon.classList.toggle('hidden');
         closeIcon.classList.toggle('hidden');
+        navBtn.setAttribute('aria-expanded', navMenu.classList.contains('-translate-y-full') ? 'false' : 'true');
       });
 
-      // Close mobile menu when a link is clicked
       document.querySelectorAll('.mobile-nav-link').forEach(link => {
         link.addEventListener('click', () => {
           navMenu.classList.add('-translate-y-full');
@@ -248,57 +287,23 @@
         });
       });
 
-      // --- Typing Effect ---
-      const subtitleEl = document.getElementById('subtitle');
-      const text = 'AI & Robotics Engineer | Innovating the Future';
-      let index = 0;
-      function type() {
-        if (index < text.length) {
-          subtitleEl.innerHTML = text.substring(0, index + 1) + '<span class="animate-ping">|</span>';
-          index++;
-          setTimeout(type, 60);
-        } else {
-          subtitleEl.innerHTML = text;
-        }
+      // Active Nav Link Highlight
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+      function activateNavLink() {
+        let index = sections.length;
+        while(--index && window.scrollY + 80 < sections[index].offsetTop) {}
+        navLinks.forEach(l => l.classList.remove("text-cyan-400", "underline"));
+        navLinks[index]?.classList.add("text-cyan-400", "underline");
       }
-      type();
+      activateNavLink();
+      window.addEventListener("scroll", activateNavLink);
 
-      // --- Scroll Animations ---
-      const animatedEls = document.querySelectorAll('.section, .group');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-in');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      animatedEls.forEach(el => {
-        el.classList.add('opacity-0', 'transition-all', 'duration-1000', 'ease-out');
-        // Initial state for animation
-        if (el.matches('.section')) {
-          el.classList.add('translate-y-8');
-        }
-        observer.observe(el);
-      });
-      
-      // Add custom keyframes for animation
-      const style = document.createElement('style');
-      style.innerHTML = `@keyframes animate-in {
-          from { opacity: 0; transform: translateY(2rem); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-in { animation: animate-in 1s ease-out forwards; }`;
-      document.head.appendChild(style);
-        
-      // --- Header Shadow on Scroll ---
+      // Header Shadow
       const header = document.getElementById('header');
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 10) {
-          header.classList.add('shadow-lg', 'shadow-slate-950/10');
-        } else {
-          header.classList.remove('shadow-lg', 'shadow-slate-950/10');
-        }
+        if (window.scrollY > 10) header.classList.add('shadow-lg','shadow-slate-950/10');
+        else header.classList.remove('shadow-lg','shadow-slate-950/10');
       });
     });
   </script>
