@@ -3,69 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Varun P C | Portfolio</title>
+  <title>Varun PC | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="scanlines"></div>
-
-  <header>
-    <h1 class="glitch" data-text="VARUN P C">VARUN P C</h1>
-    <p class="subtitle">AI | Robotics | Systems Engineering</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section id="about">
-    <h2>👾 About Me</h2>
-    <p>I am an engineering student passionate about <span class="neon">Artificial Intelligence, Robotics, and Scalable Systems</span>. 
-    I build futuristic projects blending <span class="pixel">innovation</span> + <span class="pixel">problem-solving</span>. 🚀</p>
-  </section>
-
-  <section id="skills">
-    <h2>⚡ Skills</h2>
-    <h3>Technical</h3>
-    <ul class="pixel-list">
-      <li>Python, Golang, JavaScript</li>
-      <li>TensorFlow, OpenCV, NLP, Computer Vision</li>
-      <li>PostgreSQL, Redis</li>
-      <li>Git, Docker, Linux, Jetson Nano</li>
-    </ul>
-    <h3>Soft Skills</h3>
-    <ul class="pixel-list">
-      <li>Analytical Thinking</li>
-      <li>Problem-Solving</li>
-      <li>Collaboration</li>
-      <li>Adaptability</li>
-      <li>Attention to Detail</li>
-      <li>Effective Communication</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>🛠 Projects</h2>
-    <div class="projects-grid">
-      <div class="card">💬 <b>GoChat</b><br> Real-time chat app in Go + WebSockets + Redis Streams</div>
-      <div class="card">🔗 <b>URL Shortener</b><br> 7k+ req/sec Golang shortener with Redis caching</div>
-      <div class="card">🚀 <b>ISRO Rover</b><br> Autonomous robot w/ OpenCV & Jetson Nano</div>
-      <div class="card">🧠 <b>Neuro Reader</b><br> EEG brainwave preprocessing for research</div>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <h1 class="glitch" data-text="Varun P C">Varun P C</h1>
+      <p class="tagline">AI & Robotics Engineer | Innovating the Future</p>
+      <a href="#about" class="scroll-btn">↓ Explore</a>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>📡 Contact</h2>
-    <p>Email: <a href="mailto:varun@example.com">varun@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/your-link" target="_blank">linkedin.com/in/your-link</a></p>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a final-year Engineering student passionate about <span class="highlight">AI, Robotics, and Futuristic Software Systems</span>.  
+      I thrive on solving real-world challenges through research, hackathons, and building scalable systems.
+    </p>
   </section>
 
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Golang</div>
+      <div class="skill-card">TensorFlow</div>
+      <div class="skill-card">OpenCV</div>
+      <div class="skill-card">PostgreSQL</div>
+      <div class="skill-card">Redis</div>
+      <div class="skill-card">Problem-Solving</div>
+      <div class="skill-card">Analytical Thinking</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>GoChat</h3>
+        <p>High-performance real-time chat app with WebSockets, Redis Streams, and PostgreSQL.</p>
+      </div>
+      <div class="project-card">
+        <h3>URL Shortener</h3>
+        <p>Optimized Golang + Redis URL shortener handling 7,000+ req/sec.</p>
+      </div>
+      <div class="project-card">
+        <h3>ISRO Rover Project</h3>
+        <p>Built self-navigating robot with obstacle detection & autonomous navigation.</p>
+      </div>
+      <div class="project-card">
+        <h3>Neuro Reader</h3>
+        <p>Processed EEG brainwave signals for research dataset creation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>Let’s build the future together 🚀</p>
+    <div class="contact-links">
+      <a href="mailto:youremail@example.com">Email</a>
+      <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Varun P C | Crafted in <span class="neon">Arch Linux vibes</span> 🐧</p>
+    <p>⚡ Built with Arch Linux vibes | © 2025 Varun PC ⚡</p>
   </footer>
 
   <script src="script.js"></script>
