@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background: #0d1117;
+  color: #c9d1d9;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Glitch Title */
+.glitch {
+  font-size: 2.5rem;
+  position: relative;
+  color: #00ffe0;
+  text-shadow: 2px 2px #ff00ff, -2px -2px #00ff00;
+  animation: flicker 2s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.9; }
+  100% { opacity: 1; }
+}
+
+.subtitle {
+  color: #8be9fd;
+  font-size: 1rem;
+}
+
+/* Nav */
+nav {
+  margin-top: 1rem;
+}
+nav a {
+  margin: 0 10px;
+  color: #50fa7b;
+  text-decoration: none;
+  transition: 0.2s;
+}
+nav a:hover {
+  color: #ff79c6;
+  text-shadow: 0px 0px 5px #ff79c6;
+}
+
+/* Neon Effects */
+.neon {
+  color: #00ffe0;
+  text-shadow: 0 0 5px #00ffe0, 0 0 15px #00ffe0;
+}
+.pixel {
+  background: #161b22;
+  padding: 2px 5px;
+  border: 2px solid #00ff88;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.pixel-list li {
+  margin: 10px 0;
+  list-style: "🟩 ";
+}
+
+/* Project Cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+.card {
+  padding: 20px;
+  border: 3px solid #50fa7b;
+  border-radius: 8px;
+  background: #161b22;
+  color: #c9d1d9;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #50fa7b;
+}
+
+/* CRT Scanline effect */
+.scanlines {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.05) 0,
+    rgba(255,255,255,0.05) 1px,
+    transparent 2px
+  );
+  z-index: 999;
+}
+
+/* Footer */
+footer {
+  padding: 1rem;
+  margin-top: 2rem;
+  background: #161b22;
+}
