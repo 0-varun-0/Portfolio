@@ -1,321 +1,194 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="scroll-smooth"> <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Varun P C, an AI & Machine Learning Engineering student specializing in AI, robotics, and software systems." />
   
-  <title>Varun P C | AI & Machine Learning Engineer</title>
-  <meta name="description" content="Portfolio of Varun P C, an AI and Machine Learning Engineering student specializing in deep learning, backend development, and robotics.">
-  <meta name="author" content="Varun P C">
-  
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+  <title>Varun P C | Portfolio</title>
   
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            'dark-bg': '#0A0A0A',
-            'dark-card': '#141414',
-            'dark-border': '#262626',
-            'dark-text': '#A3A3A3',
-            'dark-heading': '#F5F5F5',
-            'primary': '#38BDF8', // Light Blue
-
-            'light-bg': '#FBFBFB',
-            'light-card': '#FFFFFF',
-            'light-border': '#E5E5E5',
-            'light-text': '#404040',
-            'light-heading': '#0A0A0A',
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.5s ease-out forwards',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: '0', transform: 'translateY(10px)' },
-              '100%': { opacity: '1', transform: 'translateY(0)' },
-            },
-          },
-        },
-      },
-    };
-  </script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
   <style>
     body {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      font-family: 'Inter', sans-serif;
     }
-    .gradient-text {
-      @apply bg-gradient-to-r from-primary to-sky-400 bg-clip-text text-transparent;
-    }
-    .focus-ring:focus-visible {
-      @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-light-bg dark:ring-offset-dark-bg;
-    }
+    /* Reveal animations */
     .reveal {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
-    .reveal.visible {
-        opacity: 1;
-        transform: translateY(0);
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Project card hover */
+    .project-card {
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #38BDF8; /* sky-400 */
     }
   </style>
-
 </head>
-<body class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text font-sans transition-colors duration-300">
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
 
-  <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <nav class="container mx-auto max-w-5xl px-6 py-4 flex justify-between items-center">
-      <a href="#hero" class="text-xl font-bold font-mono text-light-heading dark:text-dark-heading hover:text-primary transition-colors focus-ring rounded-md">
-        VPC<span class="text-primary">.</span>
-      </a>
-      <div class="hidden md:flex items-center space-x-8 text-sm">
-        <a href="#projects" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors">Projects</a>
-        <a href="#skills" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors">Skills</a>
-        <a href="#experience" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors">Experience</a>
-        <a href="#contact" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors">Contact</a>
-      </div>
-       <button id="theme-toggle" class="p-2 rounded-full text-light-heading dark:text-dark-heading hover:bg-light-card dark:hover:bg-dark-card transition-colors focus-ring" aria-label="Toggle theme">
-            <i data-lucide="sun" id="sun-icon" class="w-5 h-5 hidden"></i>
-            <i data-lucide="moon" id="moon-icon" class="w-5 h-5"></i>
-        </button>
-    </nav>
-  </header>
-
-  <main class="container mx-auto max-w-5xl px-6">
-
-    <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex flex-col justify-center pt-24 pb-12">
-      <div class="space-y-6 animate-fade-in">
-        <h1 class="text-4xl md:text-6xl font-bold text-light-heading dark:text-dark-heading">Varun P C</h1>
-        <h2 class="text-2xl md:text-3xl font-medium gradient-text">AI & Machine Learning Engineer</h2>
-        <p class="max-w-2xl text-lg">
-          An Artificial Intelligence and Machine Learning Engineering student deeply passionate about AI. Excited to contribute to transformative projects and collaborate on initiatives shaping the future of technology.
-        </p>
-        <div class="flex items-center space-x-4 pt-4">
-          <a href="mailto:0x0varun0x0@gmail.com" class="inline-block bg-primary text-dark-bg font-bold py-3 px-6 rounded-lg hover:bg-sky-300 transition-colors focus-ring">
-            Contact Me
-          </a>
-          <a href="https://github.com/0-varun-0" target="_blank" rel="noopener noreferrer" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors focus-ring p-2 rounded-full">
-            <i data-lucide="github" class="w-6 h-6"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/varun-p-c-301b71245/" target="_blank" rel="noopener noreferrer" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors focus-ring p-2 rounded-full">
-            <i data-lucide="linkedin" class="w-6 h-6"></i>
-          </a>
+  <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md z-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex justify-between items-center h-16">
+        <a href="#hero" class="text-xl font-bold text-blue-600 dark:text-blue-500">Varun P C</a>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#projects" class="hover:text-blue-500">Projects</a>
+          <a href="#skills" class="hover:text-blue-500">Skills</a>
+          <a href="#experience" class="hover:text-blue-500">Experience</a>
+          <a href="#education" class="hover:text-blue-500">Education</a>
+          <a href="#awards" class="hover:text-blue-500">Awards</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-900 dark:text-gray-100 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
         </div>
       </div>
-    </section>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800">
+      <a href="#projects" class="block py-2 px-6 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
+      <a href="#skills" class="block py-2 px-6 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Skills</a>
+      <a href="#experience" class="block py-2 px-6 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Experience</a>
+      <a href="#education" class="block py-2 px-6 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Education</a>
+      <a href="#awards" class="block py-2 px-6 text-sm hover:bg-gray-100 dark:hover:bg-gray-700">Awards</a>
+    </div>
+  </nav>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 space-y-12">
-      <div class="reveal">
-        <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Projects</h2>
-        <div class="w-16 h-1 bg-primary rounded-full"></div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Project 1 -->
-        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors">
-          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">VQA Chatbot for Dermatology Assistance</h3>
-          <p>Engineered a chatbot for clinically relevant dermatology queries using deep learning and NLP, supporting disease detection and skincare recommendations.</p>
-          <div class="flex flex-wrap gap-2 text-sm">
-            <span class="tech-tag">Python</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">NLP</span>
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16"> <img src="your-photo.jpg" alt="Varun P C" class="w-32 h-32 rounded-full border-4 border-blue-500 shadow-lg mb-6">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-blue-500">Varun P C</span></h1>
+    <p class="max-w-2xl text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
+      AI & Machine Learning Engineering student passionate about building transformative technologies in AI, robotics, and software systems.
+    </p>
+    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+      <a href="#projects" class="bg-blue-500 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition-colors">View My Work</a>
+      <a href="mailto:0x0varun0x0@gmail.com" class="border border-blue-500 text-blue-500 px-8 py-3 rounded-lg hover:bg-blue-500 hover:text-white transition-colors">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="projects" class="py-20 bg-white dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto px-6 reveal">
+      <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="project-card flex flex-col border border-gray-200 dark:border-gray-700 p-6 rounded-lg shadow bg-gray-50 dark:bg-gray-700">
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">VQA Chatbot for Dermatology</h3>
+          <p class="text-gray-600 dark:text-gray-300 flex-grow">Engineered a chatbot capable of answering dermatology queries using deep learning and NLP. Supported disease & allergy detection for decision support.</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" target="_blank" class="text-gray-500 hover:text-blue-500" aria-label="GitHub Repository">GitHub Link</a>
+            <a href="#" target="_blank" class="text-gray-500 hover:text-blue-500" aria-label="Live Demo">Live Demo</a>
           </div>
         </div>
-        <!-- Project 2 -->
-        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors">
-          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">High-Performance URL Shortener</h3>
-          <p>Developed a URL shortener in Golang handling 7,000+ req/sec. Reduced response times by 90% and saved costs with Redis caching and atomic concurrency.</p>
-          <div class="flex flex-wrap gap-2 text-sm">
-            <span class="tech-tag">Golang</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Redis</span>
-          </div>
-        </div>
-        <!-- Project 3 -->
-        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors">
-          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">Gesture-Controlled Virtual Mouse</h3>
-          <p>Built a virtual mouse for hands-free navigation using Python and computer vision, achieving near real-time responsiveness with high accuracy.</p>
-          <div class="flex flex-wrap gap-2 text-sm">
-            <span class="tech-tag">Python</span><span class="tech-tag">MediaPipe</span><span class="tech-tag">OpenCV</span>
-          </div>
-        </div>
-        <!-- Project 4 -->
-        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors">
-          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">Autonomous Robotics Projects</h3>
-          <p>Designed and deployed autonomous robots (RoboSoccer, Line Follower, Maze Runner) using microcontrollers, sensor arrays, and path-planning algorithms.</p>
-          <div class="flex flex-wrap gap-2 text-sm">
-            <span class="tech-tag">Embedded C</span><span class="tech-tag">Arduino</span><span class="tech-tag">Microcontrollers</span>
+        <div class="project-card flex flex-col border border-gray-200 dark:border-gray-700 p-6 rounded-lg shadow bg-gray-50 dark:bg-gray-700">
+          <h3 class="text-xl font-semibold mb-2 text-blue-500">High-Performance URL Shortener</h3>
+          <p class="text-gray-600 dark:text-gray-300 flex-grow">Built a URL shortener in Go with Redis caching, achieving over 7,000 req/sec and reducing response time by 90% through efficient key-value storage.</p>
+          <div class="mt-4 flex space-x-4">
+            <a href="#" target="_blank" class="text-gray-500 hover:text-blue-500" aria-label="GitHub Repository">GitHub Link</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-24">
-      <div class="reveal">
-        <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Technical Skills</h2>
-        <div class="w-16 h-1 bg-primary rounded-full"></div>
+  <section id="skills" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 reveal">
+      <h2 class="text-3xl font-bold text-center mb-12">Technical Skills</h2>
+      <div class="text-center">
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Golang</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Python</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">C++</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Flask</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Gin</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Redis</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">SQL</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">REST API</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">gRPC</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Linux</span>
+        <span class="inline-block bg-sky-100 text-sky-700 font-medium py-1 px-3 rounded-full m-1 dark:bg-sky-900 dark:text-sky-300">Docker</span>
       </div>
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="reveal">
-          <h3 class="text-lg font-semibold text-light-heading dark:text-dark-heading mb-4">Languages</h3>
-          <ul class="space-y-2">
-            <li>Golang, Python, C++, C, Java, Kotlin</li>
-          </ul>
-        </div>
-        <div class="reveal">
-          <h3 class="text-lg font-semibold text-light-heading dark:text-dark-heading mb-4">AI & Machine Learning</h3>
-          <ul class="space-y-2">
-            <li>Deep Learning, Image Processing, OpenCV, NLP</li>
-          </ul>
-        </div>
-        <div class="reveal">
-          <h3 class="text-lg font-semibold text-light-heading dark:text-dark-heading mb-4">Backend & Systems</h3>
-          <ul class="space-y-2">
-            <li>Flask, Gin, Gorm, SQL, REST API, Redis, System Design, gRPC, Linux</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Experience & Education Section -->
-    <section id="experience" class="py-24">
-        <div class="reveal">
-            <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Experience & Education</h2>
-            <div class="w-16 h-1 bg-primary rounded-full"></div>
-        </div>
-        <div class="mt-12 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-light-border before:dark:bg-dark-border before:opacity-50">
-            <!-- Experience Item -->
-            <div class="reveal relative pl-12">
-                <div class="absolute left-5 top-1 w-2 h-2 rounded-full bg-primary -translate-x-1/2"></div>
-                <p class="text-sm text-primary font-medium">Aug 2023 - Sep 2023</p>
-                <h3 class="text-lg font-bold text-light-heading dark:text-dark-heading">Programme On Robotics</h3>
-                <p class="text-light-text dark:text-dark-text">Comedkares</p>
-            </div>
-            <!-- Education Item -->
-            <div class="reveal relative pl-12">
-                <div class="absolute left-5 top-1 w-2 h-2 rounded-full bg-primary -translate-x-1/2"></div>
-                <p class="text-sm text-primary font-medium">2022 - Present</p>
-                <h3 class="text-lg font-bold text-light-heading dark:text-dark-heading">B.Tech in Artificial Intelligence and Machine Learning</h3>
-                <p class="text-light-text dark:text-dark-text">Presidency University, Bengaluru</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="awards" class="py-24">
-        <div class="reveal">
-            <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Activities & Awards</h2>
-            <div class="w-16 h-1 bg-primary rounded-full"></div>
-        </div>
-        <ul class="mt-12 space-y-4 list-disc list-inside">
-            <li class="reveal">Won 2nd place in SIH held in Presidency University | 2024</li>
-            <li class="reveal">Won 2nd place in Anveshana held in Presidency University | 2024</li>
-            <li class="reveal">Participated in CodeRed Hackathon at NIT Karnataka | 2024</li>
-            <li class="reveal">Participated in Innovatex 2.0 (Line Follower, Robo Soccer, Maze Runner) | 2023</li>
-            <li class="reveal">Participated in FantomCode RVITM Hackathon | 2023</li>
-            <li class="reveal">Participated in HackPrix 2.0 Hackathon in Lords College | 2025</li>
+  <section id="experience" class="py-20 bg-white dark:bg-gray-800">
+    <div class="max-w-4xl mx-auto px-6 reveal">
+      <h2 class="text-3xl font-bold text-center mb-12">Experience</h2>
+      <div class="border-l-2 border-blue-500 pl-6">
+        <h3 class="text-xl font-semibold">Backend Developer Intern</h3>
+        <p class="text-md text-gray-500 dark:text-gray-400 mb-2">Comedkares | Aug 2023 - Sep 2023</p>
+        <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+          <li>Developed and maintained RESTful APIs for a healthcare application using Golang and the Gin framework.</li>
+          <li>Implemented JWT-based authentication to secure endpoints and manage user sessions.</li>
+          <li>Collaborated with the frontend team to integrate APIs and troubleshoot issues, improving application stability.</li>
         </ul>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer id="contact" class="border-t border-light-border dark:border-dark-border mt-24">
-    <div class="container mx-auto max-w-5xl px-6 py-12 text-center">
-      <h3 class="text-2xl font-bold text-light-heading dark:text-dark-heading mb-4">Get In Touch</h3>
-      <p class="mb-6">Feel free to reach out for collaborations or just a friendly chat.</p>
-      <a href="mailto:0x0varun0x0@gmail.com" class="text-primary hover:underline text-lg">0x0varun0x0@gmail.com</a>
-      <div class="flex justify-center space-x-6 mt-8">
-        <a href="https://github.com/0-varun-0" target="_blank" rel="noopener noreferrer" class="text-light-text dark:text-dark-text hover:text-primary transition-colors">
-          <i data-lucide="github" class="w-6 h-6"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/varun-p-c-301b71245/" target="_blank" rel="noopener noreferrer" class="text-light-text dark:text-dark-text hover:text-primary transition-colors">
-          <i data-lucide="linkedin" class="w-6 h-6"></i>
-        </a>
       </div>
-      <p class="text-sm mt-12 text-light-text/70 dark:text-dark-text/50">Designed and built by Varun P C.</p>
+    </div>
+  </section>
+
+  <section id="education" class="py-20">
+    <div class="max-w-6xl mx-auto px-6 reveal grid md:grid-cols-2 gap-12">
+      <div>
+        <h2 class="text-3xl font-bold text-center mb-8">Education</h2>
+        <div class="space-y-4 text-center md:text-left">
+          <div>
+            <h3 class="font-semibold">B.Tech, AI & Machine Learning</h3>
+            <p>Presidency University, Bengaluru (GPA: 7.55)</p>
+          </div>
+          <div>
+            <h3 class="font-semibold">PUC (Science)</h3>
+            <p>Sai Angels PU College, Chikkamagaluru (78%)</p>
+          </div>
+        </div>
+      </div>
+      <div id="awards">
+        <h2 class="text-3xl font-bold text-center mb-8">Awards & Activities</h2>
+        <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 text-center md:text-left">
+          <li>Finalist, CodeRed Hackathon @ NIT Karnataka (2024)</li>
+          <li>2nd Place, Smart India Hackathon Internal @ Presidency University (2024)</li>
+          <li>Participant, FantomCode RVITM Hackathon (2023)</li>
+          </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    <p>© 2025 Varun P C | Built with Tailwind CSS</p>
+    <div class="mt-4 space-x-6">
+      <a href="https://github.com/0-varun-0" target="_blank" class="hover:text-white">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile" target="_blank" class="hover:text-white">LinkedIn</a>
+      <a href="/path-to-your-resume.pdf" target="_blank" class="hover:text-white">Resume</a>
     </div>
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
-
-      // --- Header Scroll Effect ---
-      const header = document.getElementById('header');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-          header.classList.add('bg-light-bg/80', 'dark:bg-dark-bg/80', 'backdrop-blur-sm', 'border-b', 'border-light-border', 'dark:border-dark-border');
-        } else {
-          header.classList.remove('bg-light-bg/80', 'dark:bg-dark-bg/80', 'backdrop-blur-sm', 'border-b', 'border-light-border', 'dark:border-dark-border');
-        }
-      });
-      
-      // --- Theme Toggle ---
-      const themeToggle = document.getElementById('theme-toggle');
-      const sunIcon = document.getElementById('sun-icon');
-      const moonIcon = document.getElementById('moon-icon');
-      const html = document.documentElement;
-
-      const applyTheme = (theme) => {
-        if (theme === 'dark') {
-            html.classList.add('dark');
-            moonIcon.style.display = 'block';
-            sunIcon.style.display = 'none';
-        } else {
-            html.classList.remove('dark');
-            moonIcon.style.display = 'none';
-            sunIcon.style.display = 'block';
-        }
-      };
-      
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      applyTheme(savedTheme);
-
-      themeToggle.addEventListener('click', () => {
-        const newTheme = html.classList.contains('dark') ? 'light' : 'dark';
-        localStorage.setItem('theme', newTheme);
-        applyTheme(newTheme);
-      });
-
-      // --- Scroll Animations ---
-      const revealElements = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      revealElements.forEach(el => {
-        observer.observe(el);
-      });
-
-      // --- Tech Tag Styling ---
-      const techTags = document.querySelectorAll('.tech-tag');
-      techTags.forEach(tag => {
-        tag.classList.add('bg-primary/10', 'text-primary', 'font-medium', 'py-1', 'px-3', 'rounded-full');
-      });
+    // --- Mobile Menu Toggle ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
     });
+
+    // --- Change: More performant Scroll Reveal using IntersectionObserver ---
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    reveals.forEach(r => observer.observe(r));
   </script>
 
 </body>
