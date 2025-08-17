@@ -4,987 +4,839 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO & Social Sharing Meta Tags -->
-  <title>Varun PC | AI & Software Engineer</title>
-  <meta name="description" content="Portfolio of Varun PC, an AI & Software Engineer specializing in building intelligent systems and scalable backend solutions.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
-
-  <!-- Open Graph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://your-domain.com/">
-  <meta property="og:title" content="Varun PC | AI & Software Engineer">
-  <meta property="og:description" content="Building intelligent systems and scalable backend solutions.">
-  <meta property="og:image" content="https://your-domain.com/social-preview.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://your-domain.com/">
-  <meta property="twitter:title" content="Varun PC | AI & Software Engineer">
-  <meta property="twitter:description" content="Building intelligent systems and scalable backend solutions.">
-  <meta property="twitter:image" content="https://your-domain.com/social-preview.png">
+  <title>Varun PC | AI & Software Engineer - Innovating Tomorrow's Technology</title>
+  <meta name="description" content="Varun PC is an AI & Software Engineer specializing in machine learning, scalable systems, and intelligent applications. Explore innovative projects and cutting-edge solutions.">
+  <meta name="keywords" content="AI Engineer, Machine Learning, Robotics, Software Engineer, Golang, Python, Full Stack Developer">
+  <meta name="author" content="Varun PC">
+  <link rel="canonical" href="https://varunpc.dev">
   
-  <!-- Scripts & Fonts -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://varunpc.dev">
+  <meta property="og:title" content="Varun PC | AI & Software Engineer">
+  <meta property="og:description" content="Innovating tomorrow's technology with AI and scalable software solutions.">
+  <meta property="og:image" content="https://varunpc.dev/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@varunpc">
+  <meta name="twitter:title" content="Varun PC | AI & Software Engineer">
+  <meta name="twitter:description" content="Innovating tomorrow's technology with AI and scalable software solutions.">
+  <meta name="twitter:image" content="https://varunpc.dev/twitter-image.jpg">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Varun PC",
+    "jobTitle": "AI & Software Engineer",
+    "description": "AI & Software Engineer specializing in machine learning and scalable systems.",
+    "url": "https://varunpc.dev",
+    "sameAs": [
+      "https://github.com/varunpc",
+      "https://linkedin.com/in/varunpc"
+    ],
+    "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Software Engineering", "Go (Programming Language)", "Python (Programming Language)"]
+  }
+  </script>
+  
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide-dev"></script>
-
-  <!-- Custom Tailwind Config & CSS -->
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Consolas', 'monospace'],
           },
-        },
-      },
+          colors: {
+            primary: {
+              50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc',
+              400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1',
+              800: '#075985', 900: '#0c4a6e', 950: '#082f49'
+            }
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+            'fade-in-down': 'fadeInDown 0.6s ease-out forwards',
+            'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+            'glow-pulse': 'glowPulse 2s ease-in-out infinite alternate',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            fadeInDown: {
+              '0%': { opacity: '0', transform: 'translateY(-30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            bounceGentle: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            },
+            glowPulse: {
+              '0%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)' },
+              '100%': { boxShadow: '0 0 40px rgba(14, 165, 233, 0.6)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' }
+            }
+          }
+        }
+      }
     };
   </script>
 
-  <style type="text/tailwindcss">
+  <style>
     @layer base {
-      body {
-        @apply bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-sans tracking-tight;
+      * {
+        box-sizing: border-box;
       }
-      h1, h2, h3 {
+      
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        @apply bg-slate-100 dark:bg-slate-900;
+        @apply text-slate-700 dark:text-slate-300 font-sans antialiased;
+        @apply selection:bg-primary-300 selection:text-primary-900;
+        line-height: 1.6;
+        transition: background-color 0.3s ease;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
         @apply text-slate-900 dark:text-slate-100 font-bold;
       }
-      h2 { @apply text-3xl sm:text-4xl; }
-      .section-subtitle { @apply text-cyan-600 dark:text-cyan-400 font-mono text-lg mb-8; }
-      .card { @apply bg-white/50 dark:bg-slate-800/80 backdrop-blur-sm; }
-    }
-    /* Full-screen section styling */
-    .scroll-section {
-      @apply h-screen w-full sticky top-0 flex flex-col items-center justify-center p-6 overflow-hidden;
-      will-change: transform, opacity;
-    }
-    /* Game Canvas Styling */
-    #game-canvas {
-        @apply max-w-2xl w-full mx-auto aspect-video bg-slate-200 dark:bg-slate-800 rounded-lg shadow-lg cursor-pointer;
+      
+      .gradient-text {
+        @apply bg-gradient-to-r from-primary-500 to-indigo-500 bg-clip-text text-transparent;
+      }
+      
+      .glass-card {
+        @apply bg-white/30 dark:bg-slate-800/30 backdrop-blur-xl border border-white/20 dark:border-slate-700/30;
+        @apply shadow-xl shadow-black/5 dark:shadow-black/20 transition-all duration-300;
+      }
+      
+      .section-padding {
+        @apply py-20 lg:py-32 px-4 sm:px-6 lg:px-8;
+      }
+      
+      .container-custom {
+        @apply max-w-7xl mx-auto;
+      }
+      
+      .loader {
+        @apply fixed inset-0 z-[9999] bg-slate-900 flex items-center justify-center;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+      
+      .loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+      
+      .particles {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+      
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        @apply bg-slate-100 dark:bg-slate-800;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        @apply bg-primary-500 rounded-full;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        @apply bg-primary-600;
+      }
+      
+      .focus-ring:focus-visible {
+        @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-slate-100 dark:ring-offset-slate-900 rounded-md;
+      }
+      
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      
+      .reveal.revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      .btn-primary {
+        @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white;
+        @apply bg-gradient-to-r from-primary-600 to-indigo-600 hover:from-primary-700 hover:to-indigo-700;
+        @apply transform transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-primary-500/25;
+      }
+      
+      .btn-secondary {
+        @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold;
+        @apply text-slate-700 dark:text-slate-200 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm;
+        @apply border border-slate-200 dark:border-slate-700 hover:bg-white/70 dark:hover:bg-slate-800/70;
+        @apply transform transition-all duration-200 hover:scale-105 hover:shadow-lg;
+      }
+      
+      header.scrolled {
+        @apply bg-white/50 dark:bg-slate-800/50 backdrop-blur-lg shadow-md;
+      }
+
+      .nav-link {
+        @apply px-4 py-2 rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-primary-500/10 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200;
+      }
+      .nav-link.active {
+        @apply bg-primary-500 text-white dark:text-white shadow-md;
+      }
+
+      .mobile-nav-link {
+        @apply block px-4 py-2 text-lg font-semibold text-slate-700 dark:text-slate-200 hover:bg-primary-500/10 rounded-lg;
+      }
+
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .mobile-menu.open {
+        transform: translateX(0);
+      }
+      
+      .skill-bar {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .skill-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #0ea5e9, #3b82f6, #8b5cf6);
+        width: 0%; /* Start at 0 width */
+        transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
     }
   </style>
 </head>
-<body class="selection:bg-cyan-300 selection:text-cyan-900">
+<body class="bg-slate-100 dark:bg-slate-900">
+  <div id="loader" class="loader">
+    <div class="flex flex-col items-center space-y-4">
+      <div class="relative">
+        <div class="w-16 h-16 border-4 border-primary-200 dark:border-primary-800 rounded-full"></div>
+        <div class="absolute top-0 left-0 w-16 h-16 border-4 border-transparent border-t-primary-500 rounded-full animate-spin"></div>
+      </div>
+      <div class="text-white font-mono text-lg animate-pulse">Initializing Interface...</div>
+    </div>
+  </div>
 
-  <!-- ===== HEADER / NAVBAR ===== -->
-  <header id="header" class="bg-transparent fixed top-0 left-0 right-0 z-[100] transition-all duration-300">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="magnetic-link text-xl font-bold font-mono text-white">VarunPC/></a>
-      <nav class="hidden md:flex items-center space-x-1 bg-slate-900/30 backdrop-blur-md p-1 rounded-full">
-        <a href="#hero" data-index="0" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Home</a>
-        <a href="#objective" data-index="1" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Objective</a>
-        <a href="#skills" data-index="2" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Skills</a>
-        <a href="#projects" data-index="3" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Projects</a>
-        <a href="#game" data-index="4" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Playground</a>
-        <a href="#contact" data-index="5" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Contact</a>
-        <button id="theme-toggle" class="magnetic-link p-2 rounded-full" aria-label="Toggle theme">
-            <i data-lucide="sun" class="text-white hidden"></i>
-            <i data-lucide="moon" class="text-white hidden"></i>
-        </button>
+  <canvas id="particles" class="particles"></canvas>
+
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="header">
+    <div class="container-custom">
+      <nav class="flex items-center justify-between py-4">
+        <a href="#hero" class="text-2xl font-bold font-mono hover:text-primary-400 transition-colors duration-300 focus-ring rounded-md" aria-label="Home">
+          <span class="gradient-text">Varun</span>
+          <span class="text-slate-800 dark:text-slate-200">PC/></span>
+        </a>
+
+        <div class="hidden lg:flex items-center space-x-1 glass-card rounded-full p-1">
+          <a href="#hero" class="nav-link focus-ring" data-section="hero">Home</a>
+          <a href="#about" class="nav-link focus-ring" data-section="about">About</a>
+          <a href="#skills" class="nav-link focus-ring" data-section="skills">Skills</a>
+          <a href="#projects" class="nav-link focus-ring" data-section="projects">Projects</a>
+          <a href="#experience" class="nav-link focus-ring" data-section="experience">Experience</a>
+          <a href="#contact" class="nav-link focus-ring" data-section="contact">Contact</a>
+        </div>
+
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" class="p-2 rounded-full glass-card text-slate-800 dark:text-slate-200 hover:text-primary-500 transition-colors duration-300 focus-ring" aria-label="Toggle dark mode">
+            <i data-lucide="sun" id="sun-icon" class="w-5 h-5"></i>
+            <i data-lucide="moon" id="moon-icon" class="w-5 h-5"></i>
+          </button>
+          
+          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg glass-card text-slate-800 dark:text-slate-200 hover:text-primary-500 transition-colors duration-300 focus-ring" aria-label="Toggle mobile menu">
+            <i data-lucide="menu" id="menu-open" class="w-6 h-6"></i>
+            <i data-lucide="x" id="menu-close" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
       </nav>
+    </div>
+
+    <div id="mobile-menu" class="lg:hidden fixed top-0 right-0 h-full w-full sm:w-80 glass-card mobile-menu">
+        <div class="flex justify-end p-6">
+            <button id="mobile-menu-close-btn" class="p-2 rounded-lg text-slate-800 dark:text-slate-200" aria-label="Close mobile menu">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+        </div>
+      <div class="p-6 pt-10">
+        <nav class="flex flex-col space-y-4">
+          <a href="#hero" class="mobile-nav-link">Home</a>
+          <a href="#about" class="mobile-nav-link">About</a>
+          <a href="#skills" class="mobile-nav-link">Skills</a>
+          <a href="#projects" class="mobile-nav-link">Projects</a>
+          <a href="#experience" class="mobile-nav-link">Experience</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <!-- This container drives the scroll length -->
-  <div id="scroll-container" class="relative">
-    <!-- HERO -->
-    <section id="hero" class="scroll-section bg-slate-50 dark:bg-slate-900">
-      <div class="text-center">
-        <h1 class="text-5xl md:text-8xl font-black">Varun P C</h1>
-        <p class="text-slate-500 dark:text-slate-400 text-lg md:text-2xl mt-6 font-mono">AI & Robotics Engineer | Innovating the Future</p>
+  <main>
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden section-padding">
+      <div class="container-custom text-center z-10">
+        <div class="space-y-8">
+          <div class="relative inline-block animate-fade-in-down">
+            <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary-400 to-indigo-600 p-1 animate-glow-pulse">
+              <div class="w-full h-full rounded-full bg-slate-800 flex items-center justify-center text-6xl animate-float">
+                🤖
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h1 class="text-4xl sm:text-6xl lg:text-8xl font-black">
+              <span class="block gradient-text animate-fade-in-down">Varun P C</span>
+            </h1>
+            <p class="text-xl sm:text-2xl lg:text-3xl font-light text-slate-600 dark:text-slate-400 animate-fade-in-up">
+              <span class="font-mono text-primary-500">AI & Software Engineer</span>
+            </p>
+            <p class="text-lg sm:text-xl text-slate-500 dark:text-slate-500 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.2s;">
+              Crafting intelligent systems and scalable APIs that bridge the gap between human imagination and technological reality.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up" style="animation-delay: 0.4s;">
+            <a href="#projects" class="btn-primary group focus-ring">
+              <span>View My Work</span>
+              <i data-lucide="arrow-right" class="w-5 h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1"></i>
+            </a>
+            <a href="#contact" class="btn-secondary group focus-ring">
+              <span>Let's Connect</span>
+              <i data-lucide="message-circle" class="w-5 h-5 ml-2"></i>
+            </a>
+          </div>
+
+          <a href="#about" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-gentle" aria-label="Scroll to about section">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-primary-500"></i>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- OBJECTIVE -->
-    <section id="objective" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="text-center max-w-3xl">
-            <h2 class="mb-4">Career Objective</h2>
-            <p class="section-subtitle">My Vision & Mission</p>
-            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                I am an Artificial Intelligence and Machine Learning Engineering student passionate about building intelligent systems. With hands-on experience in robotics and backend engineering, I aim to contribute to transformative projects in AI and human-AI collaboration.
-            </p>
-        </div>
-    </section>
+    <section id="about" class="section-padding">
+      <div class="container-custom">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="space-y-6 reveal">
+            <div>
+              <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">About Me</h2>
+              <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-full"></div>
+            </div>
+            
+            <div class="space-y-4 text-lg text-slate-600 dark:text-slate-400">
+              <p>
+                I'm a passionate <strong class="text-primary-600 dark:text-primary-400">AI & Machine Learning Engineering student</strong> with a deep fascination for creating intelligent, scalable, and efficient systems.
+              </p>
+              <p>
+                My journey in technology spans from low-level robotics to high-level AI model development, with hands-on experience in building robust backend systems that power next-generation applications.
+              </p>
+              <p>
+                I believe in the transformative power of AI to solve real-world problems and am committed to contributing to projects that push the boundaries of what's possible in intelligent automation.
+              </p>
+            </div>
 
-    <!-- SKILLS -->
-    <section id="skills" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="w-full max-w-4xl">
-          <h2 class="text-center mb-4">Core Competencies</h2>
-          <p class="section-subtitle text-center">Technologies I Work With</p>
-          <div class="grid md:grid-cols-2 gap-8 mt-12">
-            <div class="card p-8 rounded-lg"><h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="code-2" class="text-cyan-600 dark:text-cyan-400"></i>Technical Skills</h3><div class="space-y-3 font-mono text-sm text-slate-600 dark:text-slate-400"><p><strong class="text-slate-800 dark:text-slate-200">Languages:</strong> Golang, Python, C++, Java</p><p><strong class="text-slate-800 dark:text-slate-200">Frameworks:</strong> Flask, Gin, Gorm, SQL, Redis</p><p><strong class="text-slate-800 dark:text-slate-200">Concepts:</strong> REST API, gRPC, Linux, NLP, OpenCV</p></div></div>
-            <div class="card p-8 rounded-lg"><h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="users" class="text-cyan-600 dark:text-cyan-400"></i>Soft Skills</h3><div class="grid grid-cols-2 gap-3 text-slate-600 dark:text-slate-400"><p>Problem-Solving</p><p>Teamwork</p><p>Communication</p><p>Adaptability</p><p>Analytical Thinking</p><p>Attention to Detail</p></div></div>
+            <div class="grid grid-cols-3 gap-6 py-8">
+              <div class="text-center">
+                <div class="text-3xl font-bold gradient-text" id="projects-count" data-target="15">0</div>
+                <div class="text-sm text-slate-500 dark:text-slate-500 font-medium">Projects</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold gradient-text" id="experience-years" data-target="3">0</div>
+                <div class="text-sm text-slate-500 dark:text-slate-500 font-medium">Years Exp</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold gradient-text" id="technologies" data-target="20">0</div>
+                <div class="text-sm text-slate-500 dark:text-slate-500 font-medium">Technologies</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-8 reveal" style="animation-delay: 0.2s;">
+            <div class="glass-card rounded-2xl p-8">
+              <h3 class="text-2xl font-bold mb-6 text-center gradient-text">Core Values</h3>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-4">
+                  <i data-lucide="lightbulb" class="w-5 h-5 text-primary-500 mt-1 flex-shrink-0"></i>
+                  <span><strong>Innovation:</strong> Constantly exploring new ideas to push technological boundaries.</span>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <i data-lucide="gem" class="w-5 h-5 text-indigo-500 mt-1 flex-shrink-0"></i>
+                  <span><strong>Excellence:</strong> Committed to delivering high-quality, robust, and scalable solutions.</span>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <i data-lucide="users" class="w-5 h-5 text-purple-500 mt-1 flex-shrink-0"></i>
+                  <span><strong>Collaboration:</strong> Believing that the best solutions are built through teamwork and shared vision.</span>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <i data-lucide="target" class="w-5 h-5 text-pink-500 mt-1 flex-shrink-0"></i>
+                  <span><strong>Impact:</strong> Focused on creating technology that solves meaningful problems.</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="w-full max-w-5xl">
-            <h2 class="text-center mb-4">Featured Projects</h2>
-            <p class="section-subtitle text-center">Innovations I've Built</p>
-            <div class="grid sm:grid-cols-2 gap-6 mt-12">
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">VQA Chatbot</h3><p class="text-sm text-slate-500 dark:text-slate-400">Deep Learning & NLP for visual question answering.</p></article>
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">High-Performance URL Shortener</h3><p class="text-sm text-slate-500 dark:text-slate-400">Engineered for 7k+ req/sec with caching.</p></article>
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">Gesture-Controlled Virtual Mouse</h3><p class="text-sm text-slate-500 dark:text-slate-400">Navigation using real-time hand tracking.</p></article>
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">Autonomous Robotics Suite</h3><p class="text-sm text-slate-500 dark:text-slate-400">Line Follower, Robo Soccer, Maze Runner bots.</p></article>
+    <section id="skills" class="section-padding bg-slate-50/50 dark:bg-slate-900/50">
+      <div class="container-custom">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">Technical Arsenal</h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            A comprehensive toolkit spanning AI/ML, backend systems, and development tools.
+          </p>
+          <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-full mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="glass-card rounded-2xl p-8 reveal">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-500 to-indigo-500 flex items-center justify-center">
+                <i data-lucide="code-2" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold gradient-text">Programming</h3>
+            </div>
+            <div class="space-y-4">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">Python</span><span class="text-sm text-primary-500">95%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">Golang</span><span class="text-sm text-primary-500">90%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">C++</span><span class="text-sm text-primary-500">85%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">TypeScript</span><span class="text-sm text-primary-500">80%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="80%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-8 reveal" style="animation-delay: 0.2s;">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
+                <i data-lucide="brain-circuit" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold gradient-text">AI & Data Science</h3>
+            </div>
+            <div class="space-y-4">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">TensorFlow/PyTorch</span><span class="text-sm text-primary-500">92%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="92%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">Scikit-learn</span><span class="text-sm text-primary-500">95%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">Pandas/NumPy</span><span class="text-sm text-primary-500">98%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="98%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">OpenCV</span><span class="text-sm text-primary-500">88%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="88%"></div></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="glass-card rounded-2xl p-8 reveal" style="animation-delay: 0.4s;">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                <i data-lucide="server" class="w-8 h-8 text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold gradient-text">Tools & Platforms</h3>
+            </div>
+            <div class="space-y-4">
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">Docker & Kubernetes</span><span class="text-sm text-primary-500">90%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">PostgreSQL/MongoDB</span><span class="text-sm text-primary-500">93%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="93%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">Git & CI/CD</span><span class="text-sm text-primary-500">95%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="flex justify-between mb-2"><span class="font-medium">AWS/GCP</span><span class="text-sm text-primary-500">85%</span></div>
+                <div class="skill-bar h-2 bg-slate-200 dark:bg-slate-700 rounded-full"><div class="skill-fill rounded-full" data-width="85%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-padding">
+      <div class="container-custom">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">Featured Projects</h2>
+          <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            A selection of projects that showcase my passion for building intelligent solutions.
+          </p>
+          <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-full mx-auto mt-4"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card rounded-2xl overflow-hidden reveal transform hover:-translate-y-2 transition-transform duration-300">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Neural Network from Scratch</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">Implemented a complete neural network library in Python using only NumPy, supporting various layers, activation functions, and optimizers.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Deep Learning</span>
+                    </div>
+                    <a href="#" class="font-semibold text-primary-500 hover:underline">View on GitHub &rarr;</a>
+                </div>
+            </div>
+            <div class="glass-card rounded-2xl overflow-hidden reveal transform hover:-translate-y-2 transition-transform duration-300" style="animation-delay: 0.2s;">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Real-time Object Detection API</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">Developed a high-performance REST API in Golang that serves a YOLOv7 model for real-time object detection, containerized with Docker.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">Golang</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">REST API</span>
+                        <span class="tech-tag">CV</span>
+                    </div>
+                    <a href="#" class="font-semibold text-primary-500 hover:underline">View on GitHub &rarr;</a>
+                </div>
+            </div>
+            <div class="glass-card rounded-2xl overflow-hidden reveal transform hover:-translate-y-2 transition-transform duration-300" style="animation-delay: 0.4s;">
+                <div class="p-8">
+                    <h3 class="text-2xl font-bold mb-2">Autonomous Rover Navigation</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-4">Programmed a physical rover using ROS and C++ to autonomously navigate a mapped environment using SLAM and pathfinding algorithms.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">ROS</span>
+                        <span class="tech-tag">Robotics</span>
+                        <span class="tech-tag">SLAM</span>
+                    </div>
+                    <a href="#" class="font-semibold text-primary-500 hover:underline">View on GitHub &rarr;</a>
+                </div>
             </div>
         </div>
+      </div>
     </section>
 
-    <!-- GAME -->
-    <section id="game" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="w-full max-w-3xl text-center">
-            <h2 class="mb-4">Playground</h2>
-            <p class="section-subtitle">Asteroid Dodger</p>
-            <div id="game-container" class="relative">
-                <canvas id="game-canvas"></canvas>
-                <div id="game-overlay" class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 backdrop-blur-sm rounded-lg">
-                    <p id="game-message" class="text-3xl font-bold text-white">Click to Start</p>
-                    <p class="text-white mt-2">Use Arrow Keys to Move</p>
+    <section id="experience" class="section-padding bg-slate-50/50 dark:bg-slate-900/50">
+      <div class="container-custom">
+          <div class="text-center mb-16 reveal">
+            <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">Career Journey</h2>
+            <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              Professional and academic experiences where I've honed my skills.
+            </p>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-full mx-auto mt-4"></div>
+          </div>
+          <div class="relative max-w-2xl mx-auto">
+              <div class="absolute left-4 top-0 h-full w-0.5 bg-primary-500/30"></div>
+              <div class="relative pl-12 pb-12 reveal">
+                  <div class="absolute left-4 top-2 -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full"></div>
+                  <p class="text-sm font-semibold text-primary-500">Summer 2024</p>
+                  <h3 class="text-xl font-bold">AI Research Intern</h3>
+                  <p class="text-slate-600 dark:text-slate-400 italic">Innovate AI Labs</p>
+                  <p class="mt-2 text-slate-600 dark:text-slate-400">Developed and optimized machine learning models for natural language understanding tasks, achieving a 15% reduction in inference time.</p>
+              </div>
+              <div class="relative pl-12 pb-12 reveal">
+                  <div class="absolute left-4 top-2 -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full"></div>
+                  <p class="text-sm font-semibold text-primary-500">2022 - Present</p>
+                  <h3 class="text-xl font-bold">Computer Science Undergraduate</h3>
+                  <p class="text-slate-600 dark:text-slate-400 italic">University of Technology</p>
+                  <p class="mt-2 text-slate-600 dark:text-slate-400">Specializing in Artificial Intelligence and Machine Learning. Led a team in a university hackathon to win 1st place with an AI-powered accessibility app.</p>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">Get In Touch</h2>
+                <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                    I'm always open to discussing new projects, creative ideas, or opportunities. Let's build something amazing together!
+                </p>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-full mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-xl mx-auto text-center reveal">
+                <a href="mailto:hello@varunpc.dev" class="btn-primary group focus-ring text-lg">
+                    <span>Say Hello</span>
+                    <i data-lucide="send" class="w-5 h-5 ml-2 transition-transform duration-200 group-hover:translate-x-1"></i>
+                </a>
+                <div class="mt-12 flex justify-center space-x-6">
+                    <a href="https://github.com/varunpc" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 transition-colors duration-300">
+                        <i data-lucide="github" class="w-8 h-8"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/varunpc" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 transition-colors duration-300">
+                        <i data-lucide="linkedin" class="w-8 h-8"></i>
+                    </a>
+                    <a href="https://twitter.com/varunpc" target="_blank" rel="noopener noreferrer" class="text-slate-500 dark:text-slate-400 hover:text-primary-500 transition-colors duration-300">
+                        <i data-lucide="twitter" class="w-8 h-8"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="text-center">
-            <h2 class="mb-4">Get In Touch</h2>
-            <p class="text-slate-600 dark:text-slate-400 max-w-md mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to innovate together.</p>
-            <a href="mailto:0x0varun0x0@gmail.com" class="magnetic-link inline-block bg-cyan-500 text-slate-900 font-bold px-8 py-3 rounded-md mt-8 hover:bg-cyan-400 transition-colors">Say Hello</a>
-            <div class="flex justify-center space-x-2 mt-12">
-                <a href="#" class="magnetic-link p-4" aria-label="GitHub"><i data-lucide="github" class="w-7 h-7 text-slate-500 dark:text-slate-400"></i></a>
-                <a href="#" class="magnetic-link p-4" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-7 h-7 text-slate-500 dark:text-slate-400"></i></a>
-            </div>
-            <p class="text-slate-500 dark:text-slate-500 text-sm mt-12 font-mono">© 2025 Varun PC</p>
-        </div>
-    </section>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
-
-      const sections = document.querySelectorAll('.scroll-section');
-      const scrollContainer = document.getElementById('scroll-container');
-      let currentSectionIndex = 0;
-
-      function setup() {
-        scrollContainer.style.height = `${sections.length * 100}vh`;
-        sections.forEach((section, index) => {
-            section.style.zIndex = sections.length - index;
-        });
-      }
-
-      // Easing function for smoother animations
-      function easeInOutCubic(t) {
-        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      }
-
-      window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        const vh = window.innerHeight;
-        const newSectionIndex = Math.min(sections.length - 1, Math.floor(scrollY / vh));
-        const progress = (scrollY % vh) / vh;
-        const easedProgress = easeInOutCubic(progress);
-
-        if (newSectionIndex !== currentSectionIndex) {
-            currentSectionIndex = newSectionIndex;
-            updateNav();
-        }
-
-        sections.forEach((section, index) => {
-            if (index < currentSectionIndex) {
-                section.style.opacity = '0';
-                section.style.transform = 'scale(0.8)';
-            } else if (index === currentSectionIndex) {
-                const scale = 1 - easedProgress * 0.2;
-                const opacity = 1 - easedProgress;
-                section.style.transform = `scale(${scale})`;
-                section.style.opacity = opacity;
-            } else {
-                section.style.opacity = '1';
-                section.style.transform = 'scale(1)';
-            }
-        });
-      }, { passive: true });
-      
-      const navLinks = document.querySelectorAll('.nav-link');
-      function updateNav() {
-          navLinks.forEach(link => {
-              link.classList.remove('bg-cyan-500/20');
-              if (parseInt(link.dataset.index) === currentSectionIndex) {
-                  link.classList.add('bg-cyan-500/20');
-              }
-          });
-      }
-      updateNav();
-
-      const themeToggle = document.getElementById('theme-toggle');
-      const sunIcon = themeToggle.querySelector('[data-lucide="sun"]');
-      const moonIcon = themeToggle.querySelector('[data-lucide="moon"]');
-      const applyTheme = (theme) => {
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-          sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden');
-        } else {
-          document.documentElement.classList.remove('dark');
-          sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden');
-        }
-      };
-      applyTheme(document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-      themeToggle.addEventListener('click', () => {
-        const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-        localStorage.theme = newTheme;
-        applyTheme(newTheme);
-      });
-
-      const magneticElements = document.querySelectorAll('.magnetic-link');
-      magneticElements.forEach(el => {
-        el.addEventListener('mousemove', function(e) {
-          const pos = this.getBoundingClientRect();
-          const x = e.clientX - pos.left - pos.width / 2;
-          const y = e.clientY - pos.top - pos.height / 2;
-          this.style.transition = 'transform 0.1s ease-out';
-          this.style.transform = `translate(${x * 0.3}px, ${y * 0.4}px)`;
-        });
-        el.addEventListener('mouseleave', function() {
-          this.style.transition = 'transform 0.3s ease-in-out';
-          this.style.transform = 'translate(0, 0)';
-        });
-      });
-
-      // --- ASTEROID DODGER GAME LOGIC ---
-      const gameCanvas = document.getElementById('game-canvas');
-      const gameOverlay = document.getElementById('game-overlay');
-      const gameMessage = document.getElementById('game-message');
-      const ctx = gameCanvas.getContext('2d');
-      let player, asteroids, score, gameOver, animationFrame;
-
-      function resizeCanvas() {
-        const container = document.getElementById('game-container');
-        gameCanvas.width = container.clientWidth;
-        gameCanvas.height = container.clientHeight;
-      }
-      
-      function initGame() {
-        resizeCanvas();
-        player = {
-          x: gameCanvas.width / 2,
-          y: gameCanvas.height - 30,
-          width: 20,
-          height: 20,
-          speed: 5,
-          dx: 0
-        };
-        asteroids = [];
-        score = 0;
-        gameOver = false;
-        gameMessage.textContent = 'Click to Start';
-        gameOverlay.style.display = 'flex';
-        if (animationFrame) cancelAnimationFrame(animationFrame);
-      }
-
-      function createAsteroid() {
-        const size = Math.random() * 20 + 10;
-        asteroids.push({
-          x: Math.random() * gameCanvas.width,
-          y: -size,
-          size: size,
-          speed: Math.random() * 2 + 1
-        });
-      }
-
-      function update() {
-        if (gameOver) return;
-        
-        ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
-
-        // Player
-        player.x += player.dx;
-        if (player.x < 0) player.x = 0;
-        if (player.x + player.width > gameCanvas.width) player.x = gameCanvas.width - player.width;
-        ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#22d3ee' : '#0891b2';
-        ctx.fillRect(player.x, player.y, player.width, player.height);
-
-        // Asteroids
-        if (Math.random() < 0.05) createAsteroid();
-        ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#64748b' : '#94a3b8';
-        asteroids.forEach((asteroid, index) => {
-          asteroid.y += asteroid.speed;
-          ctx.fillRect(asteroid.x, asteroid.y, asteroid.size, asteroid.size);
-          // Collision
-          if (
-            player.x < asteroid.x + asteroid.size &&
-            player.x + player.width > asteroid.x &&
-            player.y < asteroid.y + asteroid.size &&
-            player.y + player.height > asteroid.y
-          ) {
-            gameOver = true;
-            gameMessage.textContent = `Game Over! Score: ${score}`;
-            gameOverlay.style.display = 'flex';
-          }
-          // Remove off-screen asteroids
-          if (asteroid.y > gameCanvas.height) {
-            asteroids.splice(index, 1);<!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </main>
   
-  <!-- SEO & Social Sharing Meta Tags -->
-  <title>Varun PC | AI & Software Engineer</title>
-  <meta name="description" content="Portfolio of Varun PC, an AI & Software Engineer specializing in building intelligent systems and scalable backend solutions.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
-
-  <!-- Open Graph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://your-domain.com/">
-  <meta property="og:title" content="Varun PC | AI & Software Engineer">
-  <meta property="og:description" content="Building intelligent systems and scalable backend solutions.">
-  <meta property="og:image" content="https://your-domain.com/social-preview.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://your-domain.com/">
-  <meta property="twitter:title" content="Varun PC | AI & Software Engineer">
-  <meta property="twitter:description" content="Building intelligent systems and scalable backend solutions.">
-  <meta property="twitter:image" content="https://your-domain.com/social-preview.png">
-  
-  <!-- Scripts & Fonts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide-dev"></script>
-
-  <!-- Custom Tailwind Config & CSS -->
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-        },
-      },
-    };
-  </script>
-
-  <style type="text/tailwindcss">
-    @layer base {
-      body {
-        @apply bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-sans tracking-tight;
-      }
-      h1, h2, h3 {
-        @apply text-slate-900 dark:text-slate-100 font-bold;
-      }
-      h2 { @apply text-3xl sm:text-4xl; }
-      .section-subtitle { @apply text-cyan-600 dark:text-cyan-400 font-mono text-lg mb-8; }
-      .card { @apply bg-white/50 dark:bg-slate-800/80 backdrop-blur-sm; }
-    }
-    /* Full-screen section styling */
-    .scroll-section {
-      @apply h-screen w-full sticky top-0 flex flex-col items-center justify-center p-6 overflow-hidden;
-      will-change: transform, opacity;
-    }
-    /* Game Canvas Styling */
-    #game-canvas {
-        @apply max-w-2xl w-full mx-auto aspect-video bg-slate-200 dark:bg-slate-800 rounded-lg shadow-lg cursor-pointer;
-    }
-  </style>
-</head>
-<body class="selection:bg-cyan-300 selection:text-cyan-900">
-
-  <!-- ===== HEADER / NAVBAR ===== -->
-  <header id="header" class="bg-transparent fixed top-0 left-0 right-0 z-[100] transition-all duration-300">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="magnetic-link text-xl font-bold font-mono text-white">VarunPC/></a>
-      <nav class="hidden md:flex items-center space-x-1 bg-slate-900/30 backdrop-blur-md p-1 rounded-full">
-        <a href="#hero" data-index="0" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Home</a>
-        <a href="#objective" data-index="1" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Objective</a>
-        <a href="#skills" data-index="2" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Skills</a>
-        <a href="#projects" data-index="3" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Projects</a>
-        <a href="#game" data-index="4" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Playground</a>
-        <a href="#contact" data-index="5" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Contact</a>
-        <button id="theme-toggle" class="magnetic-link p-2 rounded-full" aria-label="Toggle theme">
-            <i data-lucide="sun" class="text-white hidden"></i>
-            <i data-lucide="moon" class="text-white hidden"></i>
-        </button>
-      </nav>
+  <footer class="py-8 bg-slate-100 dark:bg-slate-900/50">
+    <div class="container-custom text-center text-slate-500 dark:text-slate-500 text-sm">
+        <p>&copy; 2025 Varun PC. All rights reserved.</p>
+        <p>Designed and built with passion.</p>
     </div>
-  </header>
-
-  <!-- This container drives the scroll length -->
-  <div id="scroll-container" class="relative">
-    <!-- HERO -->
-    <section id="hero" class="scroll-section bg-slate-50 dark:bg-slate-900">
-      <div class="text-center">
-        <h1 class="text-5xl md:text-8xl font-black">Varun P C</h1>
-        <p class="text-slate-500 dark:text-slate-400 text-lg md:text-2xl mt-6 font-mono">AI & Robotics Engineer | Innovating the Future</p>
-      </div>
-    </section>
-
-    <!-- OBJECTIVE -->
-    <section id="objective" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="text-center max-w-3xl">
-            <h2 class="mb-4">Career Objective</h2>
-            <p class="section-subtitle">My Vision & Mission</p>
-            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                I am an Artificial Intelligence and Machine Learning Engineering student passionate about building intelligent systems. With hands-on experience in robotics and backend engineering, I aim to contribute to transformative projects in AI and human-AI collaboration.
-            </p>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="w-full max-w-4xl">
-          <h2 class="text-center mb-4">Core Competencies</h2>
-          <p class="section-subtitle text-center">Technologies I Work With</p>
-          <div class="grid md:grid-cols-2 gap-8 mt-12">
-            <div class="card p-8 rounded-lg"><h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="code-2" class="text-cyan-600 dark:text-cyan-400"></i>Technical Skills</h3><div class="space-y-3 font-mono text-sm text-slate-600 dark:text-slate-400"><p><strong class="text-slate-800 dark:text-slate-200">Languages:</strong> Golang, Python, C++, Java</p><p><strong class="text-slate-800 dark:text-slate-200">Frameworks:</strong> Flask, Gin, Gorm, SQL, Redis</p><p><strong class="text-slate-800 dark:text-slate-200">Concepts:</strong> REST API, gRPC, Linux, NLP, OpenCV</p></div></div>
-            <div class="card p-8 rounded-lg"><h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="users" class="text-cyan-600 dark:text-cyan-400"></i>Soft Skills</h3><div class="grid grid-cols-2 gap-3 text-slate-600 dark:text-slate-400"><p>Problem-Solving</p><p>Teamwork</p><p>Communication</p><p>Adaptability</p><p>Analytical Thinking</p><p>Attention to Detail</p></div></div>
-          </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="w-full max-w-5xl">
-            <h2 class="text-center mb-4">Featured Projects</h2>
-            <p class="section-subtitle text-center">Innovations I've Built</p>
-            <div class="grid sm:grid-cols-2 gap-6 mt-12">
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">VQA Chatbot</h3><p class="text-sm text-slate-500 dark:text-slate-400">Deep Learning & NLP for visual question answering.</p></article>
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">High-Performance URL Shortener</h3><p class="text-sm text-slate-500 dark:text-slate-400">Engineered for 7k+ req/sec with caching.</p></article>
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">Gesture-Controlled Virtual Mouse</h3><p class="text-sm text-slate-500 dark:text-slate-400">Navigation using real-time hand tracking.</p></article>
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">Autonomous Robotics Suite</h3><p class="text-sm text-slate-500 dark:text-slate-400">Line Follower, Robo Soccer, Maze Runner bots.</p></article>
-            </div>
-        </div>
-    </section>
-
-    <!-- GAME -->
-    <section id="game" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="w-full max-w-3xl text-center">
-            <h2 class="mb-4">Playground</h2>
-            <p class="section-subtitle">Asteroid Dodger</p>
-            <div id="game-container" class="relative">
-                <canvas id="game-canvas"></canvas>
-                <div id="game-overlay" class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 backdrop-blur-sm rounded-lg">
-                    <p id="game-message" class="text-3xl font-bold text-white">Click to Start</p>
-                    <p class="text-white mt-2">Use Arrow Keys to Move</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="text-center">
-            <h2 class="mb-4">Get In Touch</h2>
-            <p class="text-slate-600 dark:text-slate-400 max-w-md mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to innovate together.</p>
-            <a href="mailto:0x0varun0x0@gmail.com" class="magnetic-link inline-block bg-cyan-500 text-slate-900 font-bold px-8 py-3 rounded-md mt-8 hover:bg-cyan-400 transition-colors">Say Hello</a>
-            <div class="flex justify-center space-x-2 mt-12">
-                <a href="#" class="magnetic-link p-4" aria-label="GitHub"><i data-lucide="github" class="w-7 h-7 text-slate-500 dark:text-slate-400"></i></a>
-                <a href="#" class="magnetic-link p-4" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-7 h-7 text-slate-500 dark:text-slate-400"></i></a>
-            </div>
-            <p class="text-slate-500 dark:text-slate-500 text-sm mt-12 font-mono">© 2025 Varun PC</p>
-        </div>
-    </section>
-  </div>
+  </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
+        // --- Initialize Lucide Icons ---
+        lucide.createIcons();
 
-      const sections = document.querySelectorAll('.scroll-section');
-      const scrollContainer = document.getElementById('scroll-container');
-      let currentSectionIndex = 0;
-
-      function setup() {
-        scrollContainer.style.height = `${sections.length * 100}vh`;
-        sections.forEach((section, index) => {
-            section.style.zIndex = sections.length - index;
+        // --- Loader ---
+        const loader = document.getElementById('loader');
+        window.addEventListener('load', () => {
+            loader.classList.add('hidden');
         });
-      }
 
-      // Easing function for smoother animations
-      function easeInOutCubic(t) {
-        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      }
+        // --- Theme Toggle ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const html = document.documentElement;
 
-      window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        const vh = window.innerHeight;
-        const newSectionIndex = Math.min(sections.length - 1, Math.floor(scrollY / vh));
-        const progress = (scrollY % vh) / vh;
-        const easedProgress = easeInOutCubic(progress);
-
-        if (newSectionIndex !== currentSectionIndex) {
-            currentSectionIndex = newSectionIndex;
-            updateNav();
-        }
-
-        sections.forEach((section, index) => {
-            if (index < currentSectionIndex) {
-                section.style.opacity = '0';
-                section.style.transform = 'scale(0.8)';
-            } else if (index === currentSectionIndex) {
-                const scale = 1 - easedProgress * 0.2;
-                const opacity = 1 - easedProgress;
-                section.style.transform = `scale(${scale})`;
-                section.style.opacity = opacity;
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                html.classList.add('dark');
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
             } else {
-                section.style.opacity = '1';
-                section.style.transform = 'scale(1)';
+                html.classList.remove('dark');
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
             }
-        });
-      }, { passive: true });
-      
-      const navLinks = document.querySelectorAll('.nav-link');
-      function updateNav() {
-          navLinks.forEach(link => {
-              link.classList.remove('bg-cyan-500/20');
-              if (parseInt(link.dataset.index) === currentSectionIndex) {
-                  link.classList.add('bg-cyan-500/20');
-              }
-          });
-      }
-      updateNav();
-
-      const themeToggle = document.getElementById('theme-toggle');
-      const sunIcon = themeToggle.querySelector('[data-lucide="sun"]');
-      const moonIcon = themeToggle.querySelector('[data-lucide="moon"]');
-      const applyTheme = (theme) => {
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-          sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden');
-        } else {
-          document.documentElement.classList.remove('dark');
-          sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden');
-        }
-      };
-      applyTheme(document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-      themeToggle.addEventListener('click', () => {
-        const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-        localStorage.theme = newTheme;
-        applyTheme(newTheme);
-      });
-
-      const magneticElements = document.querySelectorAll('.magnetic-link');
-      magneticElements.forEach(el => {
-        el.addEventListener('mousemove', function(e) {
-          const pos = this.getBoundingClientRect();
-          const x = e.clientX - pos.left - pos.width / 2;
-          const y = e.clientY - pos.top - pos.height / 2;
-          this.style.transition = 'transform 0.1s ease-out';
-          this.style.transform = `translate(${x * 0.3}px, ${y * 0.4}px)`;
-        });
-        el.addEventListener('mouseleave', function() {
-          this.style.transition = 'transform 0.3s ease-in-out';
-          this.style.transform = 'translate(0, 0)';
-        });
-      });
-
-      // --- ASTEROID DODGER GAME LOGIC ---
-      const gameCanvas = document.getElementById('game-canvas');
-      const gameOverlay = document.getElementById('game-overlay');
-      const gameMessage = document.getElementById('game-message');
-      const ctx = gameCanvas.getContext('2d');
-      let player, asteroids, score, gameOver, animationFrame;
-
-      function resizeCanvas() {
-        const container = document.getElementById('game-container');
-        gameCanvas.width = container.clientWidth;
-        gameCanvas.height = container.clientHeight;
-      }
-      
-      function initGame() {
-        resizeCanvas();
-        player = {
-          x: gameCanvas.width / 2,
-          y: gameCanvas.height - 30,
-          width: 20,
-          height: 20,
-          speed: 5,
-          dx: 0
         };
-        asteroids = [];
-        score = 0;
-        gameOver = false;
-        gameMessage.textContent = 'Click to Start';
-        gameOverlay.style.display = 'flex';
-        if (animationFrame) cancelAnimationFrame(animationFrame);
-      }
 
-      function createAsteroid() {
-        const size = Math.random() * 20 + 10;
-        asteroids.push({
-          x: Math.random() * gameCanvas.width,
-          y: -size,
-          size: size,
-          speed: Math.random() * 2 + 1
-        });
-      }
+        // Check for saved theme in localStorage or system preference
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        applyTheme(savedTheme);
 
-      function update() {
-        if (gameOver) return;
-        
-        ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
-
-        // Player
-        player.x += player.dx;
-        if (player.x < 0) player.x = 0;
-        if (player.x + player.width > gameCanvas.width) player.x = gameCanvas.width - player.width;
-        ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#22d3ee' : '#0891b2';
-        ctx.fillRect(player.x, player.y, player.width, player.height);
-
-        // Asteroids
-        if (Math.random() < 0.05) createAsteroid();
-        ctx.fillStyle = document.documentElement.classList.contains('dark') ? '#64748b' : '#94a3b8';
-        asteroids.forEach((asteroid, index) => {
-          asteroid.y += asteroid.speed;
-          ctx.fillRect(asteroid.x, asteroid.y, asteroid.size, asteroid.size);
-          // Collision
-          if (
-            player.x < asteroid.x + asteroid.size &&
-            player.x + player.width > asteroid.x &&
-            player.y < asteroid.y + asteroid.size &&
-            player.y + player.height > asteroid.y
-          ) {
-            gameOver = true;
-            gameMessage.textContent = `Game Over! Score: ${score}`;
-            gameOverlay.style.display = 'flex';
-          }
-          // Remove off-screen asteroids
-          if (asteroid.y > gameCanvas.height) {
-            asteroids.splice(index, 1);
-            score++;
-          }
+        themeToggle.addEventListener('click', () => {
+            const isDark = html.classList.toggle('dark');
+            const newTheme = isDark ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
         });
         
-        // Score
-        ctx.fillStyle = document.documentElement.classList.contains('dark') ? 'white' : 'black';
-        ctx.font = '16px JetBrains Mono';
-        ctx.fillText(`Score: ${score}`, 10, 20);
-
-        animationFrame = requestAnimationFrame(update);
-      }
-
-      function movePlayer(e) {
-        if (e.key === 'ArrowRight' || e.key === 'd') player.dx = player.speed;
-        else if (e.key === 'ArrowLeft' || e.key === 'a') player.dx = -player.speed;
-      }
-      function stopPlayer(e) {
-        if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'ArrowLeft' || e.key === 'a') player.dx = 0;
-      }
-
-      gameOverlay.addEventListener('click', () => {
-        initGame();
-        gameOverlay.style.display = 'none';
-        update();
-      });
-      
-      window.addEventListener('keydown', movePlayer);
-      window.addEventListener('keyup', stopPlayer);
-      window.addEventListener('resize', initGame);
-      
-      // --- INITIAL SETUP CALLS ---
-      setup();
-      initGame();
-      window.addEventListener('resize', setup);
-    });
-  </script>
-</body><!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO & Social Sharing Meta Tags -->
-  <title>Varun PC | AI & Software Engineer</title>
-  <meta name="description" content="Portfolio of Varun PC, an AI & Software Engineer specializing in building intelligent systems and scalable backend solutions.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
-
-  <!-- Open Graph / Facebook / LinkedIn -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://your-domain.com/">
-  <meta property="og:title" content="Varun PC | AI & Software Engineer">
-  <meta property="og:description" content="Building intelligent systems and scalable backend solutions.">
-  <meta property="og:image" content="https://your-domain.com/social-preview.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://your-domain.com/">
-  <meta property="twitter:title" content="Varun PC | AI & Software Engineer">
-  <meta property="twitter:description" content="Building intelligent systems and scalable backend solutions.">
-  <meta property="twitter:image" content="https://your-domain.com/social-preview.png">
-  
-  <!-- Scripts & Fonts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide-dev"></script>
-
-  <!-- Custom Tailwind Config & CSS -->
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-        },
-      },
-    };
-  </script>
-
-  <style type="text/tailwindcss">
-    @layer base {
-      body {
-        @apply bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-sans tracking-tight;
-      }
-      h1, h2, h3 {
-        @apply text-slate-900 dark:text-slate-100 font-bold;
-      }
-      h2 { @apply text-3xl sm:text-4xl; }
-      .section-subtitle { @apply text-cyan-600 dark:text-cyan-400 font-mono text-lg mb-8; }
-      .card { @apply bg-white/50 dark:bg-slate-800/80 backdrop-blur-sm; }
-    }
-    /* Full-screen section styling */
-    .scroll-section {
-      @apply h-screen w-full sticky top-0 flex flex-col items-center justify-center p-6 overflow-hidden;
-      will-change: transform, opacity;
-    }
-  </style>
-</head>
-<body class="selection:bg-cyan-300 selection:text-cyan-900">
-
-  <!-- ===== HEADER / NAVBAR ===== -->
-  <header id="header" class="bg-transparent fixed top-0 left-0 right-0 z-[100] transition-all duration-300">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="magnetic-link text-xl font-bold font-mono text-white">VarunPC/></a>
-      <nav class="hidden md:flex items-center space-x-1 bg-slate-900/30 backdrop-blur-md p-1 rounded-full">
-        <a href="#hero" data-index="0" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Home</a>
-        <a href="#objective" data-index="1" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Objective</a>
-        <a href="#skills" data-index="2" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Skills</a>
-        <a href="#projects" data-index="3" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Projects</a>
-        <a href="#contact" data-index="4" class="nav-link magnetic-link px-4 py-2 text-white transition-colors rounded-full">Contact</a>
-        <button id="theme-toggle" class="magnetic-link p-2 rounded-full" aria-label="Toggle theme">
-            <i data-lucide="sun" class="text-white hidden"></i>
-            <i data-lucide="moon" class="text-white hidden"></i>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <!-- This container drives the scroll length -->
-  <div id="scroll-container" class="relative">
-    <!-- HERO -->
-    <section id="hero" class="scroll-section bg-slate-50 dark:bg-slate-900">
-      <div class="text-center">
-        <h1 class="text-5xl md:text-8xl font-black">Varun P C</h1>
-        <p class="text-slate-500 dark:text-slate-400 text-lg md:text-2xl mt-6 font-mono">AI & Robotics Engineer | Innovating the Future</p>
-      </div>
-    </section>
-
-    <!-- OBJECTIVE -->
-    <section id="objective" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="text-center max-w-3xl">
-            <h2 class="mb-4">Career Objective</h2>
-            <p class="section-subtitle">My Vision & Mission</p>
-            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                I am an Artificial Intelligence and Machine Learning Engineering student passionate about building intelligent systems. With hands-on experience in robotics and backend engineering, I aim to contribute to transformative projects in AI and human-AI collaboration.
-            </p>
-        </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="w-full max-w-4xl">
-          <h2 class="text-center mb-4">Core Competencies</h2>
-          <p class="section-subtitle text-center">Technologies I Work With</p>
-          <div class="grid md:grid-cols-2 gap-8 mt-12">
-            <div class="card p-8 rounded-lg"><h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="code-2" class="text-cyan-600 dark:text-cyan-400"></i>Technical Skills</h3><div class="space-y-3 font-mono text-sm text-slate-600 dark:text-slate-400"><p><strong class="text-slate-800 dark:text-slate-200">Languages:</strong> Golang, Python, C++, Java</p><p><strong class="text-slate-800 dark:text-slate-200">Frameworks:</strong> Flask, Gin, Gorm, SQL, Redis</p><p><strong class="text-slate-800 dark:text-slate-200">Concepts:</strong> REST API, gRPC, Linux, NLP, OpenCV</p></div></div>
-            <div class="card p-8 rounded-lg"><h3 class="text-2xl mb-4 flex items-center gap-3"><i data-lucide="users" class="text-cyan-600 dark:text-cyan-400"></i>Soft Skills</h3><div class="grid grid-cols-2 gap-3 text-slate-600 dark:text-slate-400"><p>Problem-Solving</p><p>Teamwork</p><p>Communication</p><p>Adaptability</p><p>Analytical Thinking</p><p>Attention to Detail</p></div></div>
-          </div>
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="w-full max-w-5xl">
-            <h2 class="text-center mb-4">Featured Projects</h2>
-            <p class="section-subtitle text-center">Innovations I've Built</p>
-            <div class="grid sm:grid-cols-2 gap-6 mt-12">
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">VQA Chatbot</h3><p class="text-sm text-slate-500 dark:text-slate-400">Deep Learning & NLP for visual question answering.</p></article>
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">High-Performance URL Shortener</h3><p class="text-sm text-slate-500 dark:text-slate-400">Engineered for 7k+ req/sec with caching.</p></article>
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">Gesture-Controlled Virtual Mouse</h3><p class="text-sm text-slate-500 dark:text-slate-400">Navigation using real-time hand tracking.</p></article>
-                <article class="card p-6 rounded-lg"><h3 class="font-bold">Autonomous Robotics Suite</h3><p class="text-sm text-slate-500 dark:text-slate-400">Line Follower, Robo Soccer, Maze Runner bots.</p></article>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="scroll-section bg-slate-50 dark:bg-slate-900">
-        <div class="text-center">
-            <h2 class="mb-4">Get In Touch</h2>
-            <p class="text-slate-600 dark:text-slate-400 max-w-md mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to innovate together.</p>
-            <a href="mailto:0x0varun0x0@gmail.com" class="magnetic-link inline-block bg-cyan-500 text-slate-900 font-bold px-8 py-3 rounded-md mt-8 hover:bg-cyan-400 transition-colors">Say Hello</a>
-            <div class="flex justify-center space-x-2 mt-12">
-                <a href="#" class="magnetic-link p-4" aria-label="GitHub"><i data-lucide="github" class="w-7 h-7 text-slate-500 dark:text-slate-400"></i></a>
-                <a href="#" class="magnetic-link p-4" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-7 h-7 text-slate-500 dark:text-slate-400"></i></a>
-            </div>
-            <p class="text-slate-500 dark:text-slate-500 text-sm mt-12 font-mono">© 2025 Varun PC</p>
-        </div>
-    </section>
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
-
-      const sections = document.querySelectorAll('.scroll-section');
-      const scrollContainer = document.getElementById('scroll-container');
-      let currentSectionIndex = 0;
-
-      function setup() {
-        scrollContainer.style.height = `${sections.length * 100}vh`;
-        sections.forEach((section, index) => {
-            section.style.zIndex = sections.length - index;
-        });
-      }
-
-      function easeInOutCubic(t) {
-        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      }
-
-      window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        const vh = window.innerHeight;
-        const newSectionIndex = Math.min(sections.length - 1, Math.floor(scrollY / vh));
-        const progress = (scrollY % vh) / vh;
-        const easedProgress = easeInOutCubic(progress);
-
-        if (newSectionIndex !== currentSectionIndex) {
-            currentSectionIndex = newSectionIndex;
-            updateNav();
-        }
-
-        sections.forEach((section, index) => {
-            if (index < currentSectionIndex) {
-                section.style.opacity = '0';
-                section.style.transform = 'scale(0.8)';
-            } else if (index === currentSectionIndex) {
-                const scale = 1 - easedProgress * 0.2;
-                const opacity = 1 - easedProgress;
-                section.style.transform = `scale(${scale})`;
-                section.style.opacity = opacity;
+        // --- Header Scroll Effect ---
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
             } else {
-                section.style.opacity = '1';
-                section.style.transform = 'scale(1)';
+                header.classList.remove('scrolled');
             }
         });
-      }, { passive: true });
-      
-      const navLinks = document.querySelectorAll('.nav-link');
-      function updateNav() {
-          navLinks.forEach(link => {
-              link.classList.remove('bg-cyan-500/20');
-              if (parseInt(link.dataset.index) === currentSectionIndex) {
-                  link.classList.add('bg-cyan-500/20');
-              }
-          });
-      }
-      updateNav();
 
-      const themeToggle = document.getElementById('theme-toggle');
-      const sunIcon = themeToggle.querySelector('[data-lucide="sun"]');
-      const moonIcon = themeToggle.querySelector('[data-lucide="moon"]');
-      const applyTheme = (theme) => {
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-          sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden');
-        } else {
-          document.documentElement.classList.remove('dark');
-          sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden');
-        }
-      };
-      applyTheme(document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-      themeToggle.addEventListener('click', () => {
-        const newTheme = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
-        localStorage.theme = newTheme;
-        applyTheme(newTheme);
-      });
+        // --- Mobile Menu ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuCloseBtn = document.getElementById('mobile-menu-close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open');
+        const menuCloseIcon = document.getElementById('menu-close');
+        const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
 
-      const magneticElements = document.querySelectorAll('.magnetic-link');
-      magneticElements.forEach(el => {
-        el.addEventListener('mousemove', function(e) {
-          const pos = this.getBoundingClientRect();
-          const x = e.clientX - pos.left - pos.width / 2;
-          const y = e.clientY - pos.top - pos.height / 2;
-          this.style.transition = 'transform 0.1s ease-out';
-          this.style.transform = `translate(${x * 0.3}px, ${y * 0.4}px)`;
+        const toggleMenu = () => {
+            mobileMenu.classList.toggle('open');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+        };
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileMenuCloseBtn.addEventListener('click', toggleMenu);
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('open')) {
+                    toggleMenu();
+                }
+            });
         });
-        el.addEventListener('mouseleave', function() {
-          this.style.transition = 'transform 0.3s ease-in-out';
-          this.style.transform = 'translate(0, 0)';
+
+        // --- GSAP & ScrollTrigger Animations ---
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Reveal animations
+        const revealElements = gsap.utils.toArray('.reveal');
+        revealElements.forEach(el => {
+            gsap.fromTo(el, 
+                { opacity: 0, y: 50 }, 
+                { 
+                    opacity: 1, y: 0, 
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 85%',
+                        toggleActions: 'play none none none',
+                    }
+                }
+            );
         });
-      });
 
-      // --- INITIAL SETUP CALLS ---
-      setup();
-      window.addEventListener('resize', setup);
-    });
-  </script>
-</body>
-</html>
+        // Skill bar animations
+        const skillFills = gsap.utils.toArray('.skill-fill');
+        skillFills.forEach(fill => {
+            const width = fill.getAttribute('data-width');
+            gsap.to(fill, {
+                width: width,
+                duration: 1.5,
+                ease: 'power2.inOut',
+                scrollTrigger: {
+                    trigger: fill.closest('.skill-item'),
+                    start: 'top 90%',
+                }
+            });
+        });
 
-</html>
-
-            score++;
-          }
+        // Counter animations
+        const counters = gsap.utils.toArray('[data-target]');
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            gsap.to(counter, {
+                innerText: target,
+                duration: 2,
+                ease: 'power1.inOut',
+                snap: { innerText: 1 },
+                scrollTrigger: {
+                    trigger: counter,
+                    start: 'top 90%',
+                },
+                onUpdate: function() {
+                    counter.innerText = Math.round(this.targets()[0].innerText);
+                }
+            });
         });
         
-        // Score
-        ctx.fillStyle = document.documentElement.classList.contains('dark') ? 'white' : 'black';
-        ctx.font = '16px JetBrains Mono';
-        ctx.fillText(`Score: ${score}`, 10, 20);
+        // --- Active Nav Link on Scroll ---
+        const sections = gsap.utils.toArray('section[id]');
+        const navLinks = gsap.utils.toArray('.nav-link');
 
-        animationFrame = requestAnimationFrame(update);
-      }
+        sections.forEach(section => {
+            ScrollTrigger.create({
+                trigger: section,
+                start: 'top center',
+                end: 'bottom center',
+                onToggle: self => {
+                    const id = section.getAttribute('id');
+                    const correspondingLink = document.querySelector(`.nav-link[data-section="${id}"]`);
+                    if (self.isActive) {
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        if (correspondingLink) {
+                            correspondingLink.classList.add('active');
+                        }
+                    }
+                }
+            });
+        });
+        if (window.scrollY < 200) {
+             document.querySelector('.nav-link[data-section="hero"]').classList.add('active');
+        }
 
-      function movePlayer(e) {
-        if (e.key === 'ArrowRight' || e.key === 'd') player.dx = player.speed;
-        else if (e.key === 'ArrowLeft' || e.key === 'a') player.dx = -player.speed;
-      }
-      function stopPlayer(e) {
-        if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'ArrowLeft' || e.key === 'a') player.dx = 0;
-      }
 
-      gameOverlay.addEventListener('click', () => {
-        initGame();
-        gameOverlay.style.display = 'none';
-        update();
-      });
-      
-      window.addEventListener('keydown', movePlayer);
-      window.addEventListener('keyup', stopPlayer);
-      window.addEventListener('resize', initGame);
-      
-      // --- INITIAL SETUP CALLS ---
-      setup();
-      initGame();
-      window.addEventListener('resize', setup);
+        // --- Particle Background ---
+        const canvas = document.getElementById('particles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+
+        const particleColor = html.classList.contains('dark') ? 'rgba(14, 165, 233, 0.5)' : 'rgba(59, 130, 246, 0.4)';
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 1;
+                this.speedX = Math.random() * 1 - 0.5;
+                this.speedY = Math.random() * 1 - 0.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.size > 0.2) this.size -= 0.01;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.fillStyle = particleColor;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            let numberOfParticles = (canvas.width * canvas.height) / 9000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+        initParticles();
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            initParticles();
+        });
     });
   </script>
 </body>
