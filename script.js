@@ -1,57 +1,58 @@
-// Particle background animation
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
+// Last updated text (kept from your resume)
+document.getElementById('lastUpdated').textContent = '30 June 2025';
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// GSAP animations
+gsap.registerPlugin(ScrollTrigger);
 
-let particlesArray = [];
-const numParticles = 100;
+// Navbar active link highlight on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav nav a');
 
-class Particle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
-    this.speedX = Math.random() * 1 - 0.5;
-    this.speedY = Math.random() * 1 - 0.5;
-  }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-
-    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-  }
-  draw() {
-    ctx.fillStyle = "#00f2ff";
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
-}
-
-function init() {
-  particlesArray = [];
-  for (let i = 0; i < numParticles; i++) {
-    particlesArray.push(new Particle());
-  }
-}
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particlesArray.forEach(p => {
-    p.update();
-    p.draw();
+function setActiveLink() {
+  let fromTop = window.scrollY + 90;
+  sections.forEach(sec => {
+    const link = document.querySelector(`.nav nav a[href="#${sec.id}"]`);
+    if (!link) return;
+    const top = sec.offsetTop, bottom = top + sec.offsetHeight;
+    if (fromTop >= top && fromTop < bottom) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      link.classList.add('active');
+    }
   });
-  requestAnimationFrame(animate);
 }
+setActiveLink();
+window.addEventListener('scroll', setActiveLink);
 
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  init();
+// Reveal animations per section
+gsap.utils.toArray('.reveal-up').forEach((el) => {
+  gsap.to(el, {
+    opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+    scrollTrigger: { trigger: el, start: "top 85%" }
+  });
 });
 
-init();
-animate();
+gsap.utils.toArray('.reveal-fade').forEach((el) => {
+  gsap.to(el, {
+    opacity: 1, duration: 0.8, ease: "power2.out",
+    scrollTrigger: { trigger: el, start: "top 85%" }
+  });
+});
+
+gsap.utils.toArray('.reveal-slide').forEach((el) => {
+  gsap.to(el, {
+    opacity: 1, x: 0, duration: 0.9, ease: "power2.out",
+    scrollTrigger: { trigger: el, start: "top 85%" }
+  });
+});
+
+// Subtle parallax on alt sections
+gsap.utils.toArray('.section.alt').forEach((sec) => {
+  gsap.fromTo(sec, { backgroundPositionY: "0%" }, {
+    backgroundPositionY: "40%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: sec,
+      scrub: 0.5
+    }
+  });
+});
