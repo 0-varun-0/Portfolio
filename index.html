@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Varun P C | AI & Machine Learning Engineer</title>
-  <meta name="description" content="Portfolio of Varun P C, an AI and Machine Learning Engineering student specializing in deep learning, backend development, and robotics.">
+  <title>Varun P C | AI Engineer</title>
+  <meta name="description" content="Portfolio of Varun P C, an AI Engineer with strong foundations in machine learning, LLM optimization, and backend systems.">
   <meta name="author" content="Varun P C">
   
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🤖%3C/text%3E%3C/svg%3E">
@@ -72,20 +72,24 @@
         opacity: 1;
         transform: translateY(0);
     }
+    .tech-tag {
+      @apply bg-primary/10 text-primary font-medium py-1 px-3 rounded-full text-sm;
+    }
   </style>
 
 </head>
 <body class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text font-sans transition-colors duration-300">
 
   <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-    <nav class="container mx-auto max-w-5xl px-6 py-4 flex justify-between items-center">
+    <nav class="container mx-auto max-w-6xl px-6 py-4 flex justify-between items-center">
       <a href="#hero" class="text-xl font-bold font-mono text-light-heading dark:text-dark-heading hover:text-primary transition-colors focus-ring rounded-md">
         VPC<span class="text-primary">.</span>
       </a>
-      <div class="hidden md:flex items-center space-x-8 text-sm">
+      <div class="hidden md:flex items-center space-x-6 text-sm">
         <a href="#projects" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors">Projects</a>
         <a href="#skills" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors">Skills</a>
         <a href="#experience" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors">Experience</a>
+        <a href="#achievements" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors">Achievements</a>
         <a href="#contact" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors">Contact</a>
       </div>
        <div class="flex items-center space-x-2">
@@ -106,29 +110,35 @@
         <a href="#projects" class="mobile-menu-link text-2xl font-semibold text-light-heading dark:text-dark-heading">Projects</a>
         <a href="#skills" class="mobile-menu-link text-2xl font-semibold text-light-heading dark:text-dark-heading">Skills</a>
         <a href="#experience" class="mobile-menu-link text-2xl font-semibold text-light-heading dark:text-dark-heading">Experience</a>
+        <a href="#achievements" class="mobile-menu-link text-2xl font-semibold text-light-heading dark:text-dark-heading">Achievements</a>
         <a href="#contact" class="mobile-menu-link text-2xl font-semibold text-light-heading dark:text-dark-heading">Contact</a>
     </div>
   </div>
 
-  <main class="container mx-auto max-w-5xl px-6">
+  <main class="container mx-auto max-w-6xl px-6">
 
     <section id="hero" class="min-h-screen flex flex-col justify-center pt-24 pb-12">
-      <div class="space-y-6 animate-fade-in">
+      <div class="space-y-6 animate-fade-in max-w-3xl">
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-light-heading dark:text-dark-heading">Varun P C</h1>
-        <h2 class="text-2xl sm:text-3xl font-medium gradient-text">AI & Machine Learning Engineer</h2>
+        <h2 class="text-2xl sm:text-3xl font-medium gradient-text">AI Engineer</h2>
         <p class="max-w-2xl text-base md:text-lg">
-          An Artificial Intelligence and Machine Learning Engineering student deeply passionate about AI. Excited to contribute to transformative projects and collaborate on initiatives shaping the future of technology.
+          AI Engineer with strong foundations in machine learning, LLM optimization, and backend systems. Passionate about building efficient, real-world AI systems, from on-device models to multimodal interfaces and autonomous robotics.
         </p>
         <div class="flex items-center space-x-4 pt-4">
           <a href="mailto:0x0varun0x0@gmail.com" class="inline-block bg-primary text-dark-bg font-bold py-3 px-6 rounded-lg hover:bg-sky-300 transition-colors focus-ring">
             Contact Me
           </a>
-          <a href="https://github.com/0-varun-0" target="_blank" rel="noopener noreferrer" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors focus-ring p-2 rounded-full">
-            <i data-lucide="github" class="w-6 h-6"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/varun-p-c-301b71245/" target="_blank" rel="noopener noreferrer" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors focus-ring p-2 rounded-full">
-            <i data-lucide="linkedin" class="w-6 h-6"></i>
-          </a>
+          <div class="flex items-center space-x-2">
+            <a href="https://github.com/0-varun-0" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors focus-ring p-2 rounded-full">
+              <i data-lucide="github" class="w-6 h-6"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Portfolio" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors focus-ring p-2 rounded-full">
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/varun-p-c-301b71245/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-light-heading dark:text-dark-heading hover:text-primary transition-colors focus-ring p-2 rounded-full">
+              <i data-lucide="linkedin" class="w-6 h-6"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -136,63 +146,62 @@
     <section id="projects" class="py-16 md:py-24 space-y-12">
       <div class="reveal">
         <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Projects</h2>
-        <div class="w-16 h-1 bg-primary rounded-full"></div>
+        <div class="w-20 h-1 bg-primary rounded-full"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors">
-          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">VQA Chatbot for Dermatology Assistance</h3>
-          <p>Engineered a chatbot for clinically relevant dermatology queries using deep learning and NLP, supporting disease detection and skincare recommendations.</p>
-          <div class="flex flex-wrap gap-2 text-sm">
-            <span class="tech-tag">Python</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">NLP</span>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors duration-300">
+          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">Lightweight LLM for On-Device AI Assistance</h3>
+          <p>Fine-tuned a 1.3B-param model with LoRA, boosting structured-doc generation by ~38%. Applied quantization for responsive CPU-only inference.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="tech-tag">Python</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Transformers</span>
           </div>
         </div>
-        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors">
-          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">High-Performance URL Shortener</h3>
-          <p>Developed a URL shortener in Golang handling 7,000+ req/sec. Reduced response times by 90% and saved costs with Redis caching and atomic concurrency.</p>
-          <div class="flex flex-wrap gap-2 text-sm">
-            <span class="tech-tag">Golang</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Redis</span>
+
+        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors duration-300">
+          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">Self-Hosted RAG System</h3>
+          <p>Designed a fully offline RAG pipeline for secure enterprise doc retrieval. Engineered a FAISS index for &lt;50ms latency and reached 92% accuracy.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="tech-tag">Python</span><span class="tech-tag">LangChain</span><span class="tech-tag">FAISS</span>
           </div>
         </div>
-        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors">
+
+        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors duration-300">
+          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">Distributed URL Shortening System</h3>
+          <p>Architected a Go-based URL service handling 7k+ req/sec with sub-5ms p95 latency, using Redis for concurrency and zero-downtime scaling.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="tech-tag">Golang</span><span class="tech-tag">Redis</span><span class="tech-tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors duration-300">
           <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">Gesture-Controlled Virtual Mouse</h3>
-          <p>Built a virtual mouse for hands-free navigation using Python and computer vision, achieving near real-time responsiveness with high accuracy.</p>
-          <div class="flex flex-wrap gap-2 text-sm">
+          <p>Developed a hands-free HCI using MediaPipe for real-time hand tracking, with stable CPU performance and adaptive gesture mapping.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
             <span class="tech-tag">Python</span><span class="tech-tag">MediaPipe</span><span class="tech-tag">OpenCV</span>
           </div>
         </div>
-        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-6 space-y-4 reveal hover:border-primary transition-colors">
-          <h3 class="text-xl font-bold text-light-heading dark:text-dark-heading">Autonomous Robotics Projects</h3>
-          <p>Designed and deployed autonomous robots (RoboSoccer, Line Follower, Maze Runner) using microcontrollers, sensor arrays, and path-planning algorithms.</p>
-          <div class="flex flex-wrap gap-2 text-sm">
-            <span class="tech-tag">Embedded C</span><span class="tech-tag">Arduino</span><span class="tech-tag">Microcontrollers</span>
-          </div>
-        </div>
+        
       </div>
     </section>
 
     <section id="skills" class="py-16 md:py-24">
       <div class="reveal">
         <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Technical Skills</h2>
-        <div class="w-16 h-1 bg-primary rounded-full"></div>
+        <div class="w-20 h-1 bg-primary rounded-full"></div>
       </div>
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="reveal">
-          <h3 class="text-lg font-semibold text-light-heading dark:text-dark-heading mb-4">Languages</h3>
-          <ul class="space-y-2">
-            <li>Golang, Python, C++, C, Java, Kotlin</li>
-          </ul>
+          <h3 class="text-lg font-semibold text-light-heading dark:text-dark-heading mb-4 flex items-center"><i data-lucide="code" class="w-5 h-5 mr-2 text-primary"></i> Languages</h3>
+          <p>Python, Golang, C++, C, Java, Kotlin</p>
         </div>
         <div class="reveal">
-          <h3 class="text-lg font-semibold text-light-heading dark:text-dark-heading mb-4">AI & Machine Learning</h3>
-          <ul class="space-y-2">
-            <li>Deep Learning, Image Processing, OpenCV, NLP</li>
-          </ul>
+          <h3 class="text-lg font-semibold text-light-heading dark:text-dark-heading mb-4 flex items-center"><i data-lucide="brain-circuit" class="w-5 h-5 mr-2 text-primary"></i> AI/ML</h3>
+          <p>Deep Learning, LLMs, NLP, RAG, Vision Models, PyTorch, TensorFlow, OpenCV, MediaPipe</p>
         </div>
         <div class="reveal">
-          <h3 class="text-lg font-semibold text-light-heading dark:text-dark-heading mb-4">Backend & Systems</h3>
-          <ul class="space-y-2">
-            <li>Flask, Gin, Gorm, SQL, REST API, Redis, System Design, gRPC, Linux</li>
-          </ul>
+          <h3 class="text-lg font-semibold text-light-heading dark:text-dark-heading mb-4 flex items-center"><i data-lucide="server" class="w-5 h-5 mr-2 text-primary"></i> Backend & Infra</h3>
+          <p>Redis, PostgreSQL, Flask, Gin, GORM, REST API, gRPC, Linux, System Design, Concurrency</p>
         </div>
       </div>
     </section>
@@ -200,54 +209,100 @@
     <section id="experience" class="py-16 md:py-24">
         <div class="reveal">
             <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Experience & Education</h2>
-            <div class="w-16 h-1 bg-primary rounded-full"></div>
+            <div class="w-20 h-1 bg-primary rounded-full"></div>
         </div>
-        <div class="mt-12 space-y-8 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-light-border before:dark:bg-dark-border before:opacity-50">
+        <div class="mt-12 space-y-10 relative before:absolute before:inset-0 before:ml-5 before:h-full before:w-0.5 before:bg-light-border/70 before:dark:bg-dark-border">
+            
             <div class="reveal relative pl-12">
-                <div class="absolute left-5 top-1 w-2 h-2 rounded-full bg-primary -translate-x-1/2"></div>
-                <p class="text-sm text-primary font-medium">Aug 2023 - Sep 2023</p>
-                <h3 class="text-lg font-bold text-light-heading dark:text-dark-heading">Programme On Robotics</h3>
+                <div class="absolute left-5 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-light-bg dark:ring-dark-bg -translate-x-1/2"></div>
+                <p class="text-sm text-primary font-medium">Aug 2023 – Sep 2023</p>
+                <h3 class="text-lg font-bold text-light-heading dark:text-dark-heading mt-1">Programme on Robotics</h3>
                 <p class="text-light-text dark:text-dark-text">Comedkares</p>
+                <p class="mt-2 text-sm">Completed hands-on training in control systems, embedded programming, and multi-sensor integration.</p>
             </div>
+
             <div class="reveal relative pl-12">
-                <div class="absolute left-5 top-1 w-2 h-2 rounded-full bg-primary -translate-x-1/2"></div>
-                <p class="text-sm text-primary font-medium">2022 - Present</p>
-                <h3 class="text-lg font-bold text-light-heading dark:text-dark-heading">B.Tech in Artificial Intelligence and Machine Learning</h3>
-                <p class="text-light-text dark:text-dark-text">Presidency University, Bengaluru</p>
+                <div class="absolute left-5 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-light-bg dark:ring-dark-bg -translate-x-1/2"></div>
+                <p class="text-sm text-primary font-medium">2021 - 2025</p>
+                <h3 class="text-lg font-bold text-light-heading dark:text-dark-heading mt-1">B.Tech in Artificial Intelligence & Machine Learning</h3>
+                <p class="text-light-text dark:text-dark-text">Presidency University, Bengaluru — GPA: 7.55</p>
+            </div>
+
+            <div class="reveal relative pl-12">
+                <div class="absolute left-5 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-light-bg dark:ring-dark-bg -translate-x-1/2"></div>
+                <p class="text-sm text-primary font-medium">Completed 2021</p>
+                <h3 class="text-lg font-bold text-light-heading dark:text-dark-heading mt-1">12th (PUC)</h3>
+                <p class="text-light-text dark:text-dark-text">Sai Angels PU College, Chikkamagaluru — 78%</p>
             </div>
         </div>
     </section>
 
-    <section id="awards" class="py-16 md:py-24">
+    <section id="achievements" class="py-16 md:py-24">
         <div class="reveal">
-            <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Activities & Awards</h2>
-            <div class="w-16 h-1 bg-primary rounded-full"></div>
+            <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Achievements & Hackathons</h2>
+            <div class="w-20 h-1 bg-primary rounded-full"></div>
         </div>
-        <ul class="mt-12 space-y-4 list-disc list-inside">
-            <li class="reveal">Won 2nd place in SIH held in Presidency University | 2024</li>
-            <li class="reveal">Won 2nd place in Anveshana held in Presidency University | 2024</li>
-            <li class="reveal">Participated in CodeRed Hackathon at NIT Karnataka | 2024</li>
-            <li class="reveal">Participated in Innovatex 2.0 (Line Follower, Robo Soccer, Maze Runner) | 2023</li>
-            <li class="reveal">Participated in FantomCode RVITM Hackathon | 2023</li>
-            <li class="reveal">Participated in HackPrix 2.0 Hackathon in Lords College | 2025</li>
-        </ul>
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="reveal bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-5">
+                <p class="font-semibold text-light-heading dark:text-dark-heading">2nd Place — Smart India Hackathon</p>
+                <p class="text-sm">Presidency University | 2024</p>
+            </div>
+            <div class="reveal bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-5">
+                <p class="font-semibold text-light-heading dark:text-dark-heading">2nd Place — Anveshana Innovation Event</p>
+                <p class="text-sm">2024</p>
+            </div>
+            <div class="reveal bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-5">
+                <p class="font-semibold text-light-heading dark:text-dark-heading">Participant — CodeRed Hackathon</p>
+                <p class="text-sm">NIT Karnataka | 2024</p>
+            </div>
+            <div class="reveal bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-5">
+                <p class="font-semibold text-light-heading dark:text-dark-heading">Competitor — Innovatex 2.0</p>
+                <p class="text-sm">RoboSoccer, Line Follower & Maze Runner | 2023</p>
+            </div>
+            <div class="reveal bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-5">
+                <p class="font-semibold text-light-heading dark:text-dark-heading">Participant — FantomCode Hackathon</p>
+                <p class="text-sm">RVITM | 2023</p>
+            </div>
+            <div class="reveal bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-lg p-5">
+                <p class="font-semibold text-light-heading dark:text-dark-heading">Participant — HackPrix 2.0</p>
+                <p class="text-sm">Lords College | 2025</p>
+            </div>
+        </div>
     </section>
+    
+    <section id="certifications" class="py-16 md:py-24">
+        <div class="reveal">
+            <h2 class="text-3xl font-bold text-light-heading dark:text-dark-heading mb-2">Certifications</h2>
+            <div class="w-20 h-1 bg-primary rounded-full"></div>
+        </div>
+        <div class="mt-12 space-y-4">
+            <div class="reveal flex items-center">
+                <i data-lucide="award" class="w-5 h-5 mr-3 text-primary"></i>
+                <p>CodeChef: DSA Using Java</p>
+            </div>
+            <div class="reveal flex items-center">
+                <i data-lucide="award" class="w-5 h-5 mr-3 text-primary"></i>
+                <p>CodeChef: Problem Solving in Java 1 & 2</p>
+            </div>
+        </div>
+    </section>
+
   </main>
 
   <footer id="contact" class="border-t border-light-border dark:border-dark-border mt-16 md:mt-24">
-    <div class="container mx-auto max-w-5xl px-6 py-12 text-center">
+    <div class="container mx-auto max-w-6xl px-6 py-12 text-center">
       <h3 class="text-2xl font-bold text-light-heading dark:text-dark-heading mb-4">Get In Touch</h3>
-      <p class="mb-6">Feel free to reach out for collaborations or just a friendly chat.</p>
-      <a href="mailto:0x0varun0x0@gmail.com" class="text-primary hover:underline text-lg">0x0varun0x0@gmail.com</a>
+      <p class="mb-6 max-w-md mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out.</p>
+      <a href="mailto:0x0varun0x0@gmail.com" class="text-primary hover:underline text-lg font-mono">0x0varun0x0@gmail.com</a>
       <div class="flex justify-center space-x-6 mt-8">
-        <a href="https://github.com/0-varun-0" target="_blank" rel="noopener noreferrer" class="text-light-text dark:text-dark-text hover:text-primary transition-colors">
+        <a href="https://github.com/0-varun-0" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-light-text dark:text-dark-text hover:text-primary transition-colors">
           <i data-lucide="github" class="w-6 h-6"></i>
         </a>
-        <a href="https://www.linkedin.com/in/varun-p-c-301b71245/" target="_blank" rel="noopener noreferrer" class="text-light-text dark:text-dark-text hover:text-primary transition-colors">
+        <a href="https://www.linkedin.com/in/varun-p-c-301b71245/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-light-text dark:text-dark-text hover:text-primary transition-colors">
           <i data-lucide="linkedin" class="w-6 h-6"></i>
         </a>
       </div>
-      <p class="text-sm mt-12 text-light-text/70 dark:text-dark-text/50">Designed and built by Varun P C.</p>
+      <p class="text-sm mt-12 text-light-text/70 dark:text-dark-text/50">Designed & Built by Varun P C</p>
     </div>
   </footer>
 
@@ -309,15 +364,7 @@
         observer.observe(el);
       });
 
-      // --- Tech Tag Styling ---
-      const techTags = document.querySelectorAll('.tech-tag');
-      techTags.forEach(tag => {
-        tag.classList.add('bg-primary/10', 'text-primary', 'font-medium', 'py-1', 'px-3', 'rounded-full');
-      });
-
-      // =============================================================
-      // MODIFICATION 4: JAVASCRIPT FOR MOBILE MENU TOGGLE
-      // =============================================================
+      // --- Mobile Menu Toggle ---
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
       const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
